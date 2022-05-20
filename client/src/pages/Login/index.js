@@ -48,7 +48,7 @@ function Login() {
         <input type='text' id="username" onChange={(e)=>setUsername(e.target.value)}></input>
         <label htmlFor='password'>Enter Password: </label>
         <input type='password' id='password' onChange={(e)=>setPassword(e.target.value)}></input>
-        <input type='submit' value='Login!'></input>
+        <input type='submit' value='Sign in'></input>
     </form>
     </>
   )
