@@ -22,7 +22,7 @@ function Register() {
             body: JSON.stringify({username: username, password: password, password_confirmation: confirmPass}),
             headers: {'Content-Type': 'application/json'}
         }
-        const response = await fetch('http://127.0.0.1:8000/api/register/', options)
+        const response = await fetch('https://127.0.0.1:8000/api/register/', options)
         const response_json = await response.json()
         console.log(response_json)
     }
