@@ -25,12 +25,15 @@ SECRET_KEY = 'django-insecure-zkm=ym!-e+(n@l^iwo90&n3e8-xwnf^gb(9r1k+bw_m&uodxz(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
+    'travel.apps.TravelConfig',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +51,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'server.urls'
 
@@ -75,8 +82,12 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgresTest',
+        'USER': 'testuser',
+        'PASSWORD': 'testpass',
+        'HOST': '127.0.0.1',
+        'PORT': '5000',
     }
 }
 
