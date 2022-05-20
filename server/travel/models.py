@@ -8,6 +8,9 @@ class Travel(models.Model):
     type = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
     continent = models.CharField(max_length=100)
+    destinationimage = models.CharField(null=True, max_length=2500)
 
     def __str__(self):
         return self.name
+
+
