@@ -35,7 +35,7 @@ function Register() {
         <input type='password' id='password' onChange={(e)=>setPassword(e.target.value)}></input>
         <label htmlFor='confirm_password'>Confirm Password: </label>
         <input type='password' id='confirm_password'onChange={(e)=>setConfirmPass(e.target.value)}></input>
-        <input type='submit' value='Sign up!'></input>
+        <input type='submit' value='Create Account'></input>
     </form>
     </>
   )
