@@ -1,8 +1,12 @@
 import React from "react";
+import Header from '../../layout/Header';
 
 function Home() {
   return (
-      <div>Home</div>
+    <>
+      <Header />
+      <div>You seem like you want the travel bug, well you have come to the right place!</div>
+    </>
   );
 }
 
