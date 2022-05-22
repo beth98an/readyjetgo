@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from "react-redux";
 import Header from '../../layout/Header';
+import "./login.css";
 
 function Login() {
   const dispatch = useDispatch()
@@ -43,12 +44,12 @@ function Login() {
     <>
       <Header />
 
-      <form onSubmit={handleSubmit}>
+      <form className="loginForm" onSubmit={handleSubmit}>
         <label htmlFor='username'>Enter Username: </label>
         <input type='text' id="username" onChange={(e) => setUsername(e.target.value)}></input>
         <label htmlFor='password'>Enter Password: </label>
         <input type='password' id='password' onChange={(e) => setPassword(e.target.value)}></input>
-        <input type='submit' value='Sign In!'></input>
+        <input type='submit' value='Log in'></input>
       </form>
     </>
   )
