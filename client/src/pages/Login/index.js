@@ -37,8 +37,9 @@ function Login() {
   }
 
   if (redirect) {
-    return navigate('/home')
+    return navigate('/main')
   }
+  
 
   return (
     <>
