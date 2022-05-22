@@ -6,7 +6,7 @@ function index() {
     <nav className="navbar">
       <NavLink to='/'>Home</NavLink>
       <NavLink classname="register" to='/main'>Main</NavLink>
-      <NavLink to='/logout'>Log out</NavLink>
+      <NavLink to='/login'>Log out</NavLink>
     </nav>
   )
 }
