@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Header from '../../layout/Header';
+import NavBar from '../../layout/NavBar';
+import "./main.css";
 
 function Auth() {
     const navigate = useNavigate()
@@ -31,9 +32,10 @@ function Auth() {
 
     return (
         <>
-            <Header />
-
-            <div>Auth is working</div>
+        
+        <NavBar/>
+            <button>Random Destination</button>
+            <button>Take a quiz</button>
         </>
     )
 }
