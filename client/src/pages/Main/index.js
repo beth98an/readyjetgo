@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import NavBar from '../../layout/NavBar';
 import "./main.css";
+import RandomLocation from '../../components/RandomLocation'
 
 function Auth() {
     const navigate = useNavigate()
@@ -34,8 +35,13 @@ function Auth() {
         <>
         
         <NavBar/>
+<<<<<<< HEAD
             <button>Random Destination</button>
             <button onClick={() => navigate('/quiz')}>Take a quiz</button>
+=======
+            <RandomLocation />
+            <button>Take a quiz</button>
+>>>>>>> 33b7d2f327c95493d97769d2d0af2b76dad71c90
         </>
     )
 }
