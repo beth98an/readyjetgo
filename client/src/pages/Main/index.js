@@ -35,7 +35,7 @@ function Auth() {
         
         <NavBar/>
             <button>Random Destination</button>
-            <button>Take a quiz</button>
+            <button onClick={() => navigate('/quiz')}>Take a quiz</button>
         </>
     )
 }
