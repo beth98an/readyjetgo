@@ -34,16 +34,6 @@ function Lobby() {
         }
     }, [])
 
-    const ButtonClicked = (e) => {
-        client.send(JSON.stringify({
-            type: 'message',
-            message: value,
-            username: username
-        }))
-        setValue('')
-        e.preventDefault()
-    }
-
     const joinRoom = (e) => {
         let newList = userList
         newList.push(username)
@@ -55,33 +45,21 @@ function Lobby() {
         e.preventDefault()
     }
 
-
-
     return (
         <div>
-            {isLoggedIn ?
-                // Chatroom
-                <div>
-                    {messages.map(message => <div key={Math.random()}><p>{message['username']}</p><p>{message['msg']}</p></div>)}<br></br>
-                    <input id="chat-message-input" type="text" size="100" value={value} onChange={e => setValue(e.target.value)}></input><br></br>
-                    <input id="chat-message-submit" type="button" value="Send" onClick={ButtonClicked}></input>
-                </div>
-                :
-                // Lobby Selection
-                <div>
-                    What chat room would you like to enter?<br></br>
-                    <input id="username" type="text" size="20" onChange={e =>
-                        setUsername(e.target.value)
-                    }></input><br></br>
-                    <input id="room-name-input" type="text" size="20" onChange={e =>
-                        setRoomCode(e.target.value)
-                    }></input><br></br>
-                    <input id="room-name-submit" type="button" value="Enter" onClick={(e) => {
-                        setIsLoggedIn(true)
-                        joinRoom(e)
-                    }}></input>
-                </div>
-            }
+            <div>
+                What chat room would you like to enter?<br></br>
+                <input id="username" type="text" size="20" onChange={e =>
+                    setUsername(e.target.value)
+                }></input><br></br>
+                <input id="room-name-input" type="text" size="20" onChange={e =>
+                    setRoomCode(e.target.value)
+                }></input><br></br>
+                <input id="room-name-submit" type="button" value="Enter" onClick={(e) => {
+                    setIsLoggedIn(true)
+                    joinRoom(e)
+                }}></input>
+            </div>
         </div>
     )
 }
