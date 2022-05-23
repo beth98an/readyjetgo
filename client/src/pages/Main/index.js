@@ -36,9 +36,10 @@ function Auth() {
         <>
         
         <NavBar/>
+        <App />
             <RandomLocation />
-            <App />
-            <button onClick={() => navigate('/quiz')}>Take a quiz</button>
+            
+            <button id="quizButton"onClick={() => navigate('/quiz')}>Take a quiz</button>
         </>
     )
 }

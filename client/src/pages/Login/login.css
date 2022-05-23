@@ -216,11 +216,18 @@ body {
 }
 
 h2 {
-  color: white;
   text-align: center;
   padding-top: 30%;
-  font-size: 4rem;
+  font-size: 10rem;
   font-family: 'Quicksand';
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 42px rgb(220, 156, 28),
+      0 0 82px rgb(220, 156, 28),
+      0 0 102px rgb(220, 156, 28),
+      0 0 151px rgb(220, 156, 28);
 
 }
 
