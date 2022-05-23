@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path='/' element={<PrivateRoute />} />git s
+        <Route exact path='/' element={<PrivateRoute />} />
         <Route exact path='/' element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
