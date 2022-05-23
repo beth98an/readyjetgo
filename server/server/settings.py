@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+DJANGO_SUPERUSER_PASSWORD='ninjapass'
+DJANGO_SUPERUSER_USERNAME='digitalninja'
+DJANGO_SUPERUSER_EMAIL = 'digitalninga@email.com'
 
 # Application definition
 

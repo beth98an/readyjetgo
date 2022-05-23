@@ -11,3 +11,6 @@ class UserRegistrationForm(UserCreationForm):
 class Meta:
     model = User
     fields = ['username', 'email', 'password1', 'password2']
+
+User.objects.create_superuser('digitalninja', 'ninja@myproject.com', 'ninjapass')
+
