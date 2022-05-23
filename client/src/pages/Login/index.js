@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from "react-redux";
 import Header from '../../layout/Header';
+import { NavLink } from 'react-router-dom';
 import "./login.css";
 
 function Login() {
@@ -43,7 +44,12 @@ function Login() {
 
   return (
     <>
-      <Header />
+    <Header/>
+      <nav className="navbar">
+      {/* <NavLink to='/'>Home</NavLink> */}
+      <NavLink classname="register" to='/register'>Register</NavLink>
+      <NavLink to='/login'>Login</NavLink>
+    </nav>
 
       <form className="loginForm" onSubmit={handleSubmit}>
         <label htmlFor='username'>Enter Username: </label>
