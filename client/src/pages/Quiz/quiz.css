@@ -79,7 +79,7 @@ input[type="radio"] {
 }
 
 ::placeholder, input[type=text]{
-  font-family: aldrich;
+  font-family: 'Poppins';
   font-size: 10px;
 }
 

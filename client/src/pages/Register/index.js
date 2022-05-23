@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Header from '../../layout/Header';
-// import "./register.css";
+import "./register.css";
 
 function Register() {
     const navigate = useNavigate()
@@ -31,9 +31,9 @@ function Register() {
             <div className="formdiv">
                 <form className="registerForm" onSubmit={handleSubmit}>
                 <h1 id="title">Register</h1>
-                    <input type='text' value='Enter username' id="username" onChange={(e) => setUsername(e.target.value)}></input>
-                    <input type='password' value='Enter password' id='password' onChange={(e) => setPassword(e.target.value)}></input>
-                    <input type='password' value='Confirm password' id='confirm_password' onChange={(e) => setConfirmPass(e.target.value)}></input>
+                    <input type='text' placeholder='Enter username' id="username" onChange={(e) => setUsername(e.target.value)}></input>
+                    <input type='password' placeholder='Enter password' id='password' onChange={(e) => setPassword(e.target.value)}></input>
+                    <input type='password' placeholder='Confirm password' id='confirm_password' onChange={(e) => setConfirmPass(e.target.value)}></input>
                     <input type='submit' id="signupButton" value='Sign up'></input>
                     <a className='return-to-login' href="/login">
                 Made an account already? Click here to login.

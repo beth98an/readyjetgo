@@ -88,7 +88,7 @@ body {
   padding: 0rem 4rem;
   padding-right: 55%;
 
-  z-index: 100;
+  z-index: 200;
 }
 
 #password{
@@ -121,8 +121,12 @@ body {
   padding: 1rem 2rem;
   margin: 0.5rem 0;
   width: 100%;
-  font-family: 'Poppins';
+  font-family: 'Grape Nuts';
   font-size: 1.5rem;
+}
+
+input {
+  font-family: 'Poppins';
 }
 
 #password:focus{
@@ -166,7 +170,7 @@ body {
 }
 
 #title {
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: 2rem;
 }
 
