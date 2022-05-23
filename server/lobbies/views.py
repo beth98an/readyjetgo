@@ -5,5 +5,5 @@ from django.shortcuts import render
 def index(request):
     return render(request, '', {})
 
-def lobby(request, lobby_session):
-    return render(request, '', {'lobby_session': lobby_session})
+def lobby(request, room_name):
+    return render(request, '', {'room_name': room_name})
