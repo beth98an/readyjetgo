@@ -35,11 +35,7 @@ DJANGO_SUPERUSER_EMAIL = 'digitalninga@email.com'
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD
-    'users.apps.UsersConfig',
-=======
     'lobbies.apps.LobbiesConfig',
->>>>>>> 4d7be4f5f734c7cef95ad0d2035cd30be1dea64e
     'travel.apps.TravelConfig',
     'users.apps.UsersConfig',
     'django.contrib.admin',
@@ -48,7 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'rest_framework',
     'corsheaders',
     'channels'
@@ -66,13 +61,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
-<<<<<<< HEAD
-
 CORS_ALLOW_CREDENTIALS = True
-
-=======
-CORS_ALLOW_CREDENTIALS = True
->>>>>>> 4d7be4f5f734c7cef95ad0d2035cd30be1dea64e
 ROOT_URLCONF = 'server.urls'
 
 TEMPLATES = [
@@ -99,12 +88,8 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'travelapp',
-        'USER': 'digital_ninja',
-        'PASSWORD': 'ninja_pass',
-        'HOST': '127.0.0.1',
-        'PORT': '5000',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

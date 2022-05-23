@@ -16,7 +16,3 @@ class VisitedLocation(models.Model):
     id = models.AutoField(primary_key=True)
     username = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     location_name = models.ForeignKey(Travel, on_delete=models.SET_NULL, null=True)
-<<<<<<< HEAD
-
-=======
->>>>>>> 4d7be4f5f734c7cef95ad0d2035cd30be1dea64e
