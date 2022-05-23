@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import Main from "./pages/Main";
 import PrivateRoute from './components/PrivateRoute';
 import TravelSurvey from './pages/Quiz';
+import Results from './pages/Results';
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/main" element={<Main />} />
         <Route path="/quiz" element={<TravelSurvey />} />
+        <Route path="/result" element={<Results />} />
       </Routes>
     </>
   );

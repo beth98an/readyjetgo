@@ -4,11 +4,7 @@ import "./header.css";
 
 function Header() {
   return (
-    <nav className="navbar">
-      {/* <NavLink to='/'>Home</NavLink> */}
-      <NavLink classname="register" to='/register'>Register</NavLink>
-      <NavLink to='/login'>Login</NavLink>
-    </nav>
+    <div></div>
   )
 }
 

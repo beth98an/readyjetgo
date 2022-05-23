@@ -1,0 +1,10 @@
+.mapContainer {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 500px;
+}
+.map {
+    width: 75%;
+    height: 75vh;
+}

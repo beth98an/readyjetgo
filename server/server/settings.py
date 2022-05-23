@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,12 +26,16 @@ SECRET_KEY = 'django-insecure-09#&p%fm+k2s2+9ilb4h!b_cdw_qmp4bt!%+l7_m9-mz6*69--
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+DJANGO_SUPERUSER_PASSWORD='ninjapass'
+DJANGO_SUPERUSER_USERNAME='digitalninja'
+DJANGO_SUPERUSER_EMAIL = 'digitalninga@email.com'
 
 # Application definition
 
 INSTALLED_APPS = [
+    'lobbies.apps.LobbiesConfig',
     'travel.apps.TravelConfig',
     'users.apps.UsersConfig',
     'django.contrib.admin',
@@ -39,9 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'rest_framework',
     'corsheaders',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -129,3 +134,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ASGI_APPLICATION = "server.asgi.application"
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [os.environ.get("REDIS_URL")],
+        },
+    },
+}
