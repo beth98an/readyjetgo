@@ -28,17 +28,20 @@ function Register() {
     return (
         <>
             <Header />
-        <div>
-            <form className="registerForm" onSubmit={handleSubmit}>
-                <label htmlFor='username'>Enter Username: </label>
-                <input type='text' id="username" onChange={(e) => setUsername(e.target.value)}></input>
-                <label htmlFor='password'>Enter Password: </label>
-                <input type='password' id='password' onChange={(e) => setPassword(e.target.value)}></input>
-                <label htmlFor='confirm_password'>Confirm Password: </label>
-                <input type='password' id='confirm_password' onChange={(e) => setConfirmPass(e.target.value)}></input>
-                <input type='submit' value='Sign up'></input>
-            </form>
+            <div>
+                <form className="registerForm" onSubmit={handleSubmit}>
+                    <label htmlFor='username'>Enter Username: </label>
+                    <input type='text' id="username" onChange={(e) => setUsername(e.target.value)}></input>
+                    <label htmlFor='password'>Enter Password: </label>
+                    <input type='password' id='password' onChange={(e) => setPassword(e.target.value)}></input>
+                    <label htmlFor='confirm_password'>Confirm Password: </label>
+                    <input type='password' id='confirm_password' onChange={(e) => setConfirmPass(e.target.value)}></input>
+                    <input type='submit' value='Sign up'></input>
+                </form>
             </div>
+            <p className='return-to-login' onClick={() => navigate('/login')}>
+                Made an account already? Click here to login.
+            </p>
         </>
     )
 }
