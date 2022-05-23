@@ -156,18 +156,23 @@ body {
   padding: 1rem 2rem;
   margin: 0.5rem 0;
   width: 100%;
+  font-family: 'Poppins';
+  font-size: 1.5rem;
 }
 
 #password:focus{
   outline: none;
   border: none;
   border: 2px solid #053271;
+  font-family: 'Poppins';
+  font-size: 1.5rem;
 }
 
 #username:focus{
   outline: none;
   border: none;
   border: 2px solid #053271;
+  
 }
 
 #loginButton{
@@ -203,7 +208,7 @@ body {
   margin-bottom: 2rem;
 }
 
-#forgot{
+.forgot{
   text-decoration: none;
   color: #333;
   font-size: 1.4rem;

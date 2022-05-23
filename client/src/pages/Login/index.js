@@ -59,7 +59,8 @@ function Login() {
         <h1 id="title">Sign In</h1>
         <input type='text' value="Username"id="username" onChange={(e) => setUsername(e.target.value)}></input>
         <input type='password'value="Enter Password" id='password' onChange={(e) => setPassword(e.target.value)}></input>
-        <a id="forgot" href="#">Forgot Your Password?</a>
+        <a class="forgot" href="#">Forgot Your Password?</a>
+        <a class="forgot" href="/register">Not a member?  Create Account Now</a>
         <input type='submit' id="loginButton" value='Sign in'></input>
         
       </form>
