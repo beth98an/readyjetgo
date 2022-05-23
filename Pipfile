@@ -10,6 +10,8 @@ django-cors-headers = "*"
 pyjwt = "*"
 psycopg2-binary = "*"
 psycopg2 = "*"
+channels = "*"
+channels-redis = "*"
 
 [dev-packages]
 
