@@ -39,7 +39,7 @@ function Auth() {
         <App />
             <RandomLocation />
             
-            <button id="quizButton"onClick={() => navigate('/quiz')}>Take a quiz</button>
+            <button id="quizButton" onClick={() => navigate('/quiz')}>Take a quiz</button>
         </>
     )
 }

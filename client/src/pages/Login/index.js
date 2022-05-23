@@ -50,11 +50,7 @@ function Login() {
     
     <>
     <Header/>
-      <nav className="navbar">
-      {/* <NavLink to='/'>Home</NavLink> */}
-      <NavLink classname="register" to='/register'>Register</NavLink>
-      <NavLink to='/login'>Login</NavLink>
-    </nav>
+
       <div className="formdiv">
       <form role = "login" data-testid="loginform" className="loginForm" onSubmit={handleSubmit}>
         <h1 id="title">Sign In</h1>
