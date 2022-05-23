@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Main from "./pages/Main";
 import PrivateRoute from './components/PrivateRoute';
+import TravelSurvey from './pages/Quiz';
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/main" element={<Main />} />
+        <Route path="/quiz" element={<TravelSurvey />} />
       </Routes>
     </>
   );
