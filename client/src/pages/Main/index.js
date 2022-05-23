@@ -35,13 +35,8 @@ function Auth() {
         <>
         
         <NavBar/>
-<<<<<<< HEAD
-            <button>Random Destination</button>
-            <button onClick={() => navigate('/quiz')}>Take a quiz</button>
-=======
             <RandomLocation />
-            <button>Take a quiz</button>
->>>>>>> 33b7d2f327c95493d97769d2d0af2b76dad71c90
+            <button onClick={() => navigate('/quiz')}>Take a quiz</button>
         </>
     )
 }

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Lato&family=Lobster&family=Poppins:wght@300;400;500;600&family=Roboto&display=swap');
 
-.App {
+/* .App {
   text-align: center;
   font-family: aldrich;
 }
@@ -38,14 +38,14 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
-body{
+/* body{
   background-color: #d6892c;
 color: #fff;
 font: aldrich;
 -webkit-font-smoothing: antialiased;
-}
+} */
 
 .card {
 
