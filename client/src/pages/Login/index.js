@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from "react-redux";
 import Header from '../../layout/Header';
 import { NavLink } from 'react-router-dom';
-// import "./login.css";
+import "./login.css";
+import styled from "styled-components";
+
 
 function Login() {
   const dispatch = useDispatch()
@@ -11,6 +13,7 @@ function Login() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [redirect, setRedirect] = useState(false)
+  const [click, setClick] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -42,7 +45,9 @@ function Login() {
   }
   
 
+  
   return (
+    
     <>
     <Header/>
       <nav className="navbar">
@@ -50,14 +55,25 @@ function Login() {
       <NavLink classname="register" to='/register'>Register</NavLink>
       <NavLink to='/login'>Login</NavLink>
     </nav>
-
+      <div className="formdiv">
       <form className="loginForm" onSubmit={handleSubmit}>
-        <label htmlFor='username'>Enter Username: </label>
-        <input type='text' id="username" onChange={(e) => setUsername(e.target.value)}></input>
-        <label htmlFor='password'>Enter Password: </label>
-        <input type='password' id='password' onChange={(e) => setPassword(e.target.value)}></input>
-        <input type='submit' value='Log in'></input>
+        <h1 id="title">Sign In</h1>
+        <input type='text' value="Username"id="username" onChange={(e) => setUsername(e.target.value)}></input>
+        <input type='password'value="Enter Password" id='password' onChange={(e) => setPassword(e.target.value)}></input>
+        <a id="forgot" href="#">Forgot Your Password?</a>
+        <input type='submit' id="loginButton" value='Sign in'></input>
+        
       </form>
+        <div className="box">
+        </div>
+        
+          <div className="box2">
+            <h2>Ready, Jet, Go!</h2>
+            <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png"></img>
+        </div>
+    </div>
+      
+      
     </>
   )
 }

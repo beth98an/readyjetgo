@@ -158,7 +158,10 @@ li {
 }
 
 .start-rotate {
-    animation: start-rotate 1s linear infinite;
+    animation: start-rotate 1s linear infinite; 
+    /* transition-duration: 10s;
+    transition-timing-function: linear;
+    transition-delay: 5s; */
 }
 
 @keyframes start-rotate {
