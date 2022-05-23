@@ -4,7 +4,7 @@ import "./header.css";
 
 function Header() {
   return (
-    <h1>Ready, Jet, Gooo</h1>
+    <div></div>
   )
 }
 
