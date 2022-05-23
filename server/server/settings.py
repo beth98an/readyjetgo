@@ -26,8 +26,11 @@ SECRET_KEY = 'django-insecure-09#&p%fm+k2s2+9ilb4h!b_cdw_qmp4bt!%+l7_m9-mz6*69--
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+DJANGO_SUPERUSER_PASSWORD='ninjapass'
+DJANGO_SUPERUSER_USERNAME='digitalninja'
+DJANGO_SUPERUSER_EMAIL = 'digitalninga@email.com'
 
 # Application definition
 
@@ -41,7 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'rest_framework',
     'corsheaders',
     'channels'
