@@ -7,6 +7,7 @@ import Main from "./pages/Main";
 import PrivateRoute from './components/PrivateRoute';
 import TravelSurvey from './pages/Quiz';
 import Results from './pages/Results';
+import Lobby from './pages/Lobby';
 
 
 
@@ -14,13 +15,14 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path='/' element={<PrivateRoute/>}/>git s
-      <Route exact path='/' element={<Home/>}/>
+        <Route exact path='/' element={<PrivateRoute />} />git s
+        <Route exact path='/' element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/main" element={<Main />} />
         <Route path="/quiz" element={<TravelSurvey />} />
         <Route path="/result" element={<Results />} />
+        <Route path="/lobby" element={<Lobby />} />
       </Routes>
     </>
   );
