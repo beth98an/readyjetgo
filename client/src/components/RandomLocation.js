@@ -17,12 +17,15 @@ const RandomLocation = () => {
         getLocation()
     }, [])
 
+
     return (
-        <div className="button">
+        <div className="button hidden1">
             <p>{locations.Name}</p>
             <img src={locations.Img}></img>
-            <button id="randomButton" onClick={getLocation}>Random Location</button>
+            <button className='hidden' id="randomButton" onClick={getLocation}>Random Location</button>
+            
         </div>
+
     )
 };
 

@@ -6,7 +6,7 @@ function index() {
   return (
     <nav className="navbar">
       <NavLink classname="register" to='/main'>Main</NavLink>
-      <NavLink activeStyle={{ color: 'black' }}to='/login'>Log out</NavLink>
+      <NavLink to='/login'>Log out</NavLink>
     </nav>
   )
 }

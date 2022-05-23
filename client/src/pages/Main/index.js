@@ -31,15 +31,31 @@ function Auth() {
         )
             ()
     }, [])
+    const getRandom = e => {
+        console.log(e.target.className)
+        const div = document.querySelector('.random')
+        if (e.target.className === 'hidden'){
+          e.target.className = ''
+          div.style.display = 'block'
+    
+        }
+        else {
+          e.target.className = 'hidden'
+          div.style.display = 'none'
+        }
+      }
 
     return (
         <>
         
         <NavBar/>
         <App />
-            <RandomLocation />
+        <RandomLocation/>
             
             <button id="quizButton" onClick={() => navigate('/quiz')}>Take a quiz</button>
+
+
+            
         </>
     )
 }
