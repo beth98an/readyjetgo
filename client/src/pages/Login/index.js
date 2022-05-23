@@ -56,7 +56,7 @@ function Login() {
       <NavLink to='/login'>Login</NavLink>
     </nav>
       <div className="formdiv">
-      <form className="loginForm" onSubmit={handleSubmit}>
+      <form role = "login" data-testid="loginform" className="loginForm" onSubmit={handleSubmit}>
         <h1 id="title">Sign In</h1>
         <input type='text' placeholder="Username"id="username" onChange={(e) => setUsername(e.target.value)}></input>
         <input type='password' placeholder="Pasword" id='password' onChange={(e) => setPassword(e.target.value)}></input>
