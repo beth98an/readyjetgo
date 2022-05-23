@@ -1,13 +1,27 @@
 import React from "react";
-import 'styles.css'
+import './styles.css'
 
 class App extends React.Component {
+    state = {
+        name: "circle"
+    }
+
+    startRotation = () => {
+        this.setState({
+            name: "circle start-rotate"
+        })
+        setTimeout(() => {
+            this.setState({
+                name: "circle start-rotate stop-rotate"
+            });
+        }, Math.floor(Math.random() * 10000) + 1)
+    }
 
     render() {
         return(
-            <div>
+            <div>    
             <div className="arrow"></div>
-                <ul className="circle">
+                <ul className={this.state.name}>
                     <li>
                         <div className="text"
                         contenteditable="true"
@@ -69,6 +83,8 @@ class App extends React.Component {
                         spellcheck="false">12</div>
                     </li>
                 </ul>
+                <button className="spin-button"
+                onClick={this.startRotation}>SPIN</button>
             </div>
         )
     }
