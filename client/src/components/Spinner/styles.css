@@ -104,7 +104,7 @@ li:nth-child(12) {
     border-radius: 50%;
     list-style: none;
     overflow: hidden;
-}
+} 
 
 li {
     overflow: hidden;
@@ -123,14 +123,15 @@ li {
     height: 200%;
     text-align: center;
     display: block;
-    transform: skewY(60deg) rotate(15deg);
-    padding-top: 20px;
-    /* cursor: pointer;
+    transform: skewY(65deg) rotate(12.5deg);
+    padding-top: 20px; 
+    cursor: pointer;
     font-weight: bold;
-    font-size: 18px; */
-} 
+    font-size: 18px; 
+ } 
 
-/* .arrow {
+
+  .arrow {
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
@@ -168,4 +169,4 @@ li {
 
 .stop-rotate {
     animation-play-state: paused;
-}  */
+} 
