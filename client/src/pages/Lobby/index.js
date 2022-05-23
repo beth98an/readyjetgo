@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { w3cwebsocket } from 'websocket'
 
 function Lobby() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [messages, setMessages] = useState([])
     const [username, setUsername] = useState('')
     const [roomCode, setRoomCode] = useState('test')
     const [userList, setUserList] = useState([])

@@ -5,8 +5,8 @@ import "./navbar.css"
 function index() {
   return (
     <nav className="navbar">
-      <NavLink classname="register" to='/main'>Main</NavLink>
-      <NavLink to='/login'>Log out</NavLink>
+      <NavLink classname="main" to='/main'>Main</NavLink>
+      <NavLink classname="login" to='/login'>Log out</NavLink>
     </nav>
   )
 }
