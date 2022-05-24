@@ -17,13 +17,13 @@ Contributors:
 - Open terminal and navigate to the root folder
 
 ## Server
-- Run `pipenv install` to install packages
 - Run `pipenv shell` to create a virtual environment
-- Cd into the **server** folder
+- Run `pipenv install` to install packages
+- cd into the **server** folder
 - Run `python manage.py runserver` to run the server
 
 ## Client
-- Cd into the **client** folder
+- cd into the **client** folder
 - Run `npm install` to install dependencies
 - Run `npm start` to run the scripts
 
