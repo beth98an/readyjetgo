@@ -15,8 +15,7 @@
   bottom:100px;
 }
 
-#image {
-  border-radius: 4px;
+.randomimg {
   padding: 5px;
   width: 25%;
 }

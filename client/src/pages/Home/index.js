@@ -6,7 +6,10 @@ function Home() {
   return (
     <>
       <NavBar className="bar" />
-      <div className= "Home" role="Home">You seem like you want the travel bug, well you have come to the right place!</div>
+      <div className= "Home" 
+      role="Home">
+        <h1>Welcome </h1>
+      </div>
 
     </>
   );
