@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { w3cwebsocket } from 'websocket'
 
 function Lobby() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    // const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [value, setValue] = useState('')
     const [messages, setMessages] = useState([])
     const [username, setUsername] = useState('')
-    const [roomCode, setRoomCode] = useState('test')
     const [userList, setUserList] = useState([])
 
-    const client = new w3cwebsocket(`ws://127.0.0.1:8000/ws/lobbies/${roomCode}/`);
+    const client = new w3cwebsocket(`ws://127.0.0.1:8000/ws/lobbies/test/`);
 
     useEffect(() => {
         client.onopen = () => {
@@ -32,33 +32,28 @@ function Lobby() {
         }
     }, [])
 
-    const joinRoom = (e) => {
-        let newList = userList
-        newList.push(username)
-        setUserList(newList)
+    const ButtonClicked = (e) => {
         client.send(JSON.stringify({
-            type: 'known_users',
-            userList: newList
+            type: 'message',
+            message: value,
+            username: username
         }))
+        setValue('')
         e.preventDefault()
     }
 
     return (
-        <div>
-            <div>
-                What chat room would you like to enter?<br></br>
-                <input id="username" type="text" size="20" onChange={e =>
-                    setUsername(e.target.value)
-                }></input><br></br>
-                <input id="room-name-input" type="text" size="20" onChange={e =>
-                    setRoomCode(e.target.value)
-                }></input><br></br>
-                <input id="room-name-submit" type="button" value="Enter" onClick={(e) => {
-                    setIsLoggedIn(true)
-                    joinRoom(e)
-                }}></input>
-            </div>
-        </div>
+        <>
+            <main>
+                {messages.map(message =>
+                    <div key={message.id}>
+                        <p>{message['username']}</p>
+                        <p>{message['msg']}</p>
+                    </div>)}
+                <input id="chat-message-input" type="text" value={value} onChange={e => setValue(e.target.value)}></input>
+                <input id="chat-message-submit" type="button" value="Send" onClick={ButtonClicked}></input>
+            </main>
+        </>
     )
 }
 
