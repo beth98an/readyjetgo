@@ -41,7 +41,7 @@ function Login() {
   }
 
   if (redirect) {
-    return navigate('/main')
+    return navigate('/home')
   }
   
 
@@ -66,7 +66,7 @@ function Login() {
         
           <div className="box2">
             <h2>Ready, Jet, Go!</h2>
-            <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png"></img>
+            <img id="areo" src="https://cdn-icons-png.flaticon.com/512/201/201623.png"></img>
         </div>
     </div>
       
