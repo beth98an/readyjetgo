@@ -17,3 +17,36 @@
     margin: 75px;
   }
 
+  .randomButton {
+    margin-left: 800px;
+    border-radius: 3px;
+    padding: 1rem 3.5rem;
+    margin-top: 1rem;
+    border: 1px solid black;
+    background-color: black;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    position: relative;
+    box-shadow: 0 7px #999;
+    bottom:-7px;
+  }
+
+  .quizButton{
+    margin-right: 100px;
+    border-radius: 3px;
+    padding: 1rem 3.5rem;
+    margin-top: 1rem;
+    border: 1px solid black;
+    background-color: black;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    position: relative;
+    box-shadow: 0 7px #999;
+    margin-left: 500px;
+    top: -50px;
+  }
+
