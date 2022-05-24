@@ -5,19 +5,18 @@ import "./navbar.css"
 function index() {
   return (
     <nav className="navbar">
-      <NavLink className="home" role="nav-home" to='/home' style={({ isActive }) => ({
-              color: isActive ? '' : '#545e6f',
-              background: isActive ? '' : '#f0f0f0',
-              fontSize: '2rem',
-              margin: '50px'
-            })}>Home</NavLink>
-      <NavLink className="main" to='/main' style={({ isActive }) => ({
+      <NavLink classname="home" role="nav-home" to='/home' style={({ isActive }) => ({
               color: isActive ? '' : '',
               background: isActive ? '' : '',
               fontSize: '2rem',
+              margin: '50px',
+              
+            })}>Home</NavLink>
+      <NavLink classname="main" to='/main' style={({ isActive }) => ({
+              fontSize: '2rem',
               margin: '50px'
-            })}>Main</NavLink>
-      <NavLink className="login" to='/login' style={({ isActive }) => ({
+            })}>Daily Spin</NavLink>
+      <NavLink classname="login" to='/login' style={({ isActive }) => ({
               color: isActive ? '' : '',
               background: isActive ? '' : '',
               fontSize: '2rem',

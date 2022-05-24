@@ -44,7 +44,7 @@ function Lobby() {
 
     return (
         <>
-            <main>
+            <main date-testid='lobbybtn'>
                 {messages.map(message =>
                     <div key={message.id}>
                         <p>{message['username']}</p>
