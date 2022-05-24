@@ -22,7 +22,7 @@ function Register() {
     }
 
     if (redirect) {
-        return navigate('/login')
+        navigate('/login')
     }
 
     return (
