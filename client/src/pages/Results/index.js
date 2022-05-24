@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Maps from '../../components/Map';
 import "./results.css";
 function Results() {

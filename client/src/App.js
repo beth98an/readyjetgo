@@ -8,6 +8,7 @@ import PrivateRoute from './components/PrivateRoute';
 import TravelSurvey from './pages/Quiz';
 import Results from './pages/Results';
 import Lobby from './pages/Lobby';
+import Destination from './pages/Destination';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/main" element={<Main />} />
         <Route path="/quiz" element={<TravelSurvey />} />
         <Route path="/result" element={<Results />} />
+        <Route path="/destination" element={<Destination />} />
         <Route path="/lobby" element={<Lobby />} />
       </Routes>
     </>

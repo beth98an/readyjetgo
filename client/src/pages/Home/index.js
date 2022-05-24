@@ -5,9 +5,11 @@ import Carousel from "react-elastic-carousel"
 import Card from '../../components/Card/Card'
 import RandomLocation from '../../components/RandomLocation/RandomLocation'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
 function Home() {
   const navigate = useNavigate()
+  const user = useSelector(state => state.username)
 
   useEffect(() => {
       (
@@ -44,7 +46,7 @@ function Home() {
       <NavBar className="bar" />
       <div className= "Home" 
       role="Home">
-        <h1 className="homeTitle">Welcome User</h1>
+        <h1 className="homeTitle">Welcome {user}</h1>
         <div className="carousel">
         <Carousel breakPoints={breakPoints}>
           <Card number="1"/>

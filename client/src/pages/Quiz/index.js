@@ -1,37 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './quiz.css';
 
 
 function TravelSurvey() {
     const dispatch =  useDispatch()
-    let name = useSelector(state => state.username);
+    const navigate = useNavigate()
+    const name = useSelector(state => state.username);
+    const [cityBeach, setCityBeach ] = useState();
+    const [continent, setContinent ] = useState();
+    
+    const updateAns1 = (e) => {
+        const inputAns1 = e.target.value;
+        setCityBeach(inputAns1);
+    };
+    const updateAns2 = (e) => {
+        const inputAns2 = e.target.value;
+        setContinent(inputAns2);
+    };
     const answers= {
-        ans1:'',
-        ans2:'',
+        ans1: cityBeach,
+        ans2: continent,
         // ans3:'',
         // ans4:'',
         // ans5:''
-        }
-
-    const surveySubmit = (e) =>{
+    }
+    const addAnswers = (obj => async(dispatch)=>{
         dispatch({
             type: "ADD_ANSWERS",
-            value: answers
+            value: obj
         })
-        console.log('Submitted')
-    }
-
-    const answerSelected = (e) => {
-        
-        if(e.target.name === 'ans1'){
-            answers.ans1 = e.target.value;
-        }
-        else if(e.target.name === 'ans2'){
-            answers.ans2 = e.target.value;
-        }
+    })
+    const surveySubmit = async(e) =>{
+        e.preventDefault()
         console.log(answers)
+        dispatch(addAnswers(answers))
+        navigate('/destination')
     }
 
     return(
@@ -42,18 +47,18 @@ function TravelSurvey() {
                 <form onSubmit={(e)=>surveySubmit(e)}>
 
                     <div className="card">
-                        <label>What type of holiday are you looking for?</label><br/>
-                        <input type="radio" name="ans1" value="City" onChange={(e)=>answerSelected(e)}/> City
-                        <input type="radio" name="ans1" value="Beach" onChange={(e)=>answerSelected(e)}/> Beach
+                        <label htmlFor='ans1'>What type of holiday are you looking for?</label><br/>
+                        <input type="radio" name="ans1" value="City" onChange={updateAns1}/> City
+                        <input type="radio" name="ans1" value="Beach" onChange={updateAns1}/> Beach
                     </div>
 
                     <div className="card">
-                        <label>Which continent would you like to visit?</label><br/>
-                        <input type="radio" name="ans2" value="Europe" onChange={(e)=>answerSelected(e)}/> Europe
-                        <input type="radio" name="ans2" value="Asia" onChange={(e)=>answerSelected(e)}/> Asia
-                        <input type="radio" name="ans2" value="Africa" onChange={(e)=>answerSelected(e)}/> Africa
-                        <input type="radio" name="ans2" value="North America" onChange={(e)=>answerSelected(e)}/>North America
-                        <input type="radio" name="ans2" value="South America" onChange={(e)=>answerSelected(e)}/>South America
+                        <label htmlFor='ans2'>Which continent would you like to visit?</label><br/>
+                        <input type="radio" name="ans2" value="Europe" onChange={updateAns2}/> Europe
+                        <input type="radio" name="ans2" value="Asia" onChange={updateAns2}/> Asia
+                        <input type="radio" name="ans2" value="Africa" onChange={updateAns2}/> Africa
+                        <input type="radio" name="ans2" value="North America" onChange={updateAns2}/>North America
+                        <input type="radio" name="ans2" value="South America" onChange={updateAns2}/>South America
                     </div>
 
                     {/* <div className="card">
