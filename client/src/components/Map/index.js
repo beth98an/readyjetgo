@@ -4,12 +4,12 @@ import axios from 'axios'
 import './map.css'
 
 const Maps = (props) => {
-  const [location, setLocation] = useState([]);
+  const [location, setLocation] = useState([0, 0]);
   const cityy = props.city
 
   useEffect(() => {
     axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${cityy}.json?access_token=pk.eyJ1IjoiYmV0aDk4YW4iLCJhIjoiY2wzaXRwYnBtMDA3bjNqcDhvcG05Z3N4YyJ9.VHEO6heZljZu6jzliXUzww`)
-    .then(resp => setLocation(resp.data.features[0].center))
+    .then(resp => setLocation(JSON.parse(JSON.stringify(resp.data.features[0].center))))
     
   }, [])
 
@@ -22,11 +22,12 @@ const Maps = (props) => {
   
 
   return (
-          <Map/>
+      <Map/>
   
   );
+
   function Map() {
-    const center = useMemo(() => ({lat: location[1], lng: location[0]}),[])
+    const center = useMemo(() => ({lat: parseFloat(location[1]), lng: parseFloat(location[0])}),[])
     return(
       <GoogleMap zoom={10} center={center} mapContainerClassName='map'>
         <Marker position={center}/>
