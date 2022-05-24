@@ -5,7 +5,7 @@ import "./navbar.css"
 function index() {
   return (
     <nav className="navbar">
-      <NavLink className="home" to='/home' style={({ isActive }) => ({
+      <NavLink className="home" role="nav-home" to='/home' style={({ isActive }) => ({
               color: isActive ? '' : '#545e6f',
               background: isActive ? '' : '#f0f0f0',
               fontSize: '2rem',
