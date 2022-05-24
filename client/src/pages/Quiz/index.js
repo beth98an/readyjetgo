@@ -1,87 +1,59 @@
-import React, {Component} from 'react'
+import React from 'react'
+import { useDispatch, useSelector } from "react-redux";
+import { Navigate } from 'react-router-dom';
 import './quiz.css';
 
-class TravelSurvey extends Component {
 
-    travellerNameSubmit(e){
-        let name = this.refs.name.value;
-        this.setState({travellerName : name}, function(){
-            console.log(this.state)
+function TravelSurvey() {
+    const dispatch =  useDispatch()
+    let name = useSelector(state => state.username);
+    const answers= {
+        ans1:'',
+        ans2:'',
+        // ans3:'',
+        // ans4:'',
+        // ans5:''
+        }
+
+    const surveySubmit = (e) =>{
+        dispatch({
+            type: "ADD_ANSWERS",
+            value: answers
         })
+        console.log('Submitted')
     }
 
-    surveySubmit(e){
-
-    }
-
-    answerSelected(e){
-        const answers = this.state.answers;
-
+    const answerSelected = (e) => {
+        
         if(e.target.name === 'ans1'){
             answers.ans1 = e.target.value;
         }
         else if(e.target.name === 'ans2'){
             answers.ans2 = e.target.value;
         }
-
-
-        this.setState({answers:answers}, function(){
-            console.log(this.state)
-        })
-
+        console.log(answers)
     }
 
-    constructor(props){
-        super(props);
-
-        this.state={
-            travellerName:'',
-            answers: {
-                ans1:'',
-                ans2:'',
-                // ans3:'',
-                // ans4:'',
-                // ans5:''
-            },
-            isSubmitted:false
-        }
-        this.travellerNameSubmit = this.travellerNameSubmit.bind(this)
-        this.surveySubmit = this.surveySubmit.bind(this)
-        this.answerSelected = this.answerSelected.bind(this)
-    }
-    render(){
-        let name = '';
-        let questions = '';
-
-        if(this.state.travellerName === '' && this.state.isSubmitted === false){
-            name = <div>
-                <h1>Please Enter Name!</h1>
-                <form onSubmit={this.travellerNameSubmit}>
-                    <input className="sName" role="quiz" type="text" placeholder="Please Enter Your Name" ref="name"/>
-                </form>
-            </div>
-        }
-        else if(this.state.travellerName !== '' && this.state.isSubmitted === false){
-            name = <div>
-                <h1>Welcome {this.state.travellerName} to our survey</h1>
-            </div>
-            questions = <div>
+    return(
+            <div>
+                <h1>Welcome {name} to our survey</h1>
+            
                 <h2>Here are some Questions</h2>
-                <form onSubmit={this.surveySubmit}>
+                <form onSubmit={(e)=>surveySubmit(e)}>
 
                     <div className="card">
                         <label>What type of holiday are you looking for?</label><br/>
-                        <input type="radio" name="ans1" value="City" onChange={this.answerSelected}/> City
-                        <input type="radio" name="ans1" value="Beach" onChange={this.answerSelected}/> Beach
+                        <input type="radio" name="ans1" value="City" onChange={(e)=>answerSelected(e)}/> City
+                        <input type="radio" name="ans1" value="Beach" onChange={(e)=>answerSelected(e)}/> Beach
                     </div>
 
                     <div className="card">
                         <label>Which continent would you like to visit?</label><br/>
-                        <input type="radio" name="ans2" value="Europe" onChange={this.answerSelected}/> Europe
-                        <input type="radio" name="ans2" value="Asia" onChange={this.answerSelected}/> Asia
-                        <input type="radio" name="ans2" value="Africa" onChange={this.answerSelected}/> Africa
-                        <input type="radio" name="ans2" value="North America" onChange={this.answerSelected}/>North America
-                        <input type="radio" name="ans2" value="South America" onChange={this.answerSelected}/>South America
+                        <input type="radio" name="ans2" value="Europe" onChange={(e)=>answerSelected(e)}/> Europe
+                        <input type="radio" name="ans2" value="Asia" onChange={(e)=>answerSelected(e)}/> Asia
+                        <input type="radio" name="ans2" value="Africa" onChange={(e)=>answerSelected(e)}/> Africa
+                        <input type="radio" name="ans2" value="North America" onChange={(e)=>answerSelected(e)}/>North America
+                        <input type="radio" name="ans2" value="South America" onChange={(e)=>answerSelected(e)}/>South America
                     </div>
 
                     {/* <div className="card">
@@ -110,17 +82,7 @@ class TravelSurvey extends Component {
                     <input className="feedback-button" type="submit" value="submit"/>
                 </form>
             </div>
-        }
-        return(
-            <div>
-                {name}
-
-                ==========================================
-
-                {questions}
-            </div>
         )
-    }
 }
 
 export default TravelSurvey

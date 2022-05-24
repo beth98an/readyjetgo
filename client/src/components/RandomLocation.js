@@ -13,9 +13,9 @@ const RandomLocation = () => {
         });
     };
 
-    useEffect(() => {
-        getLocation()
-    }, [])
+    // useEffect(() => {
+    //     getLocation()
+    // }, [])
 
 
     return (
