@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import Header from '../../layout/Header';
 import { NavLink } from 'react-router-dom';
 import "./login.css";
+import styled from "styled-components";
 
 
 function Login() {
@@ -15,7 +16,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
+
     const responseToken = await fetch('http://127.0.0.1:8000/api/login/', {
       method: 'POST',
       body: JSON.stringify({ username: username, password: password }),
@@ -25,32 +26,6 @@ function Login() {
     const token = await responseToken.json()
     localStorage.setItem('jwt', token.jwt)
 
-<<<<<<< HEAD
-    const responseAuth = await fetch('http://127.0.0.1:8000/api/auth/', {
-      method: 'POST',
-      body: JSON.stringify({ token: token.jwt }),
-      headers: { 'Content-Type': 'application/json' }
-    })
-    const content = await responseAuth.json()
-    localStorage.setItem('username', content.username)
-    dispatch({
-      type: "SET_USERNAME",
-      value: content.username
-    })
-    setRedirect(true)
-
-    
-
-    if (redirect) {
-      navigate('/home')
-    }
-
-    
-  }
-
-  
-  
-=======
     if (token.jwt) {
 
       const responseAuth = await fetch('http://127.0.0.1:8000/api/auth/', {
@@ -75,7 +50,6 @@ function Login() {
   if (redirect) {
     navigate('/home')
   }
->>>>>>> 629e979d032fe2a0bbe4643c6bf3164408454568
 
 
 
