@@ -6,14 +6,12 @@ function index() {
   return (
     <nav className="navbar">
       <NavLink classname="home" role="nav-home" to='/home' style={({ isActive }) => ({
-              color: isActive ? '' : '#545e6f',
-              background: isActive ? '' : '#f0f0f0',
+              color: isActive ? '' : '',
+              background: isActive ? '' : '',
               fontSize: '2rem',
               margin: '50px'
             })}>Home</NavLink>
       <NavLink classname="main" to='/main' style={({ isActive }) => ({
-              color: isActive ? '' : '',
-              background: isActive ? '' : '',
               fontSize: '2rem',
               margin: '50px'
             })}>Main</NavLink>
