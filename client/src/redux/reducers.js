@@ -2,17 +2,17 @@ const initState = {
     username: ''
 }
 
-const reducer = (state = initState, action) =>{
-    switch(action.type){
+const reducer = (state = initState, action) => {
+    switch (action.type) {
         case "SET_USERNAME":
             return {
-                ...state, 
+                ...state,
                 username: action.value
             }
         case "RESET":
             return initState
-            
-        default: 
+
+        default:
             return state;
     }
 }

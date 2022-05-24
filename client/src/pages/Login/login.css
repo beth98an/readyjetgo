@@ -1,0 +1,242 @@
+/* .navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(150, 146, 146);
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+.loginForm {
+    text-align: center;
+
+}
+
+input, label {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+
+input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  } */
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@900&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Indie+Flower&family=Lobster&family=Poppins:wght@100&family=Quicksand&display=swap');
+
+*,
+*::before,
+*::after{
+  margin:0;
+  padding:0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+}
+
+body {
+  box-sizing:border-box;
+  background-color: #cc5577;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%23cc5577' width='11' height='11'/%3E%3Crect fill='%23ce5776' x='10' width='11' height='11'/%3E%3Crect fill='%23d05a76' y='10' width='11' height='11'/%3E%3Crect fill='%23d15c75' x='20' width='11' height='11'/%3E%3Crect fill='%23d35f74' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%23d46174' y='20' width='11' height='11'/%3E%3Crect fill='%23d66473' x='30' width='11' height='11'/%3E%3Crect fill='%23d76673' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%23d96972' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%23da6c72' y='30' width='11' height='11'/%3E%3Crect fill='%23db6e71' x='40' width='11' height='11'/%3E%3Crect fill='%23dc7171' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%23dd7471' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%23de7671' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%23df7971' y='40' width='11' height='11'/%3E%3Crect fill='%23e07c71' x='50' width='11' height='11'/%3E%3Crect fill='%23e17e71' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%23e28171' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%23e38471' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%23e38771' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%23e48972' y='50' width='11' height='11'/%3E%3Crect fill='%23e58c72' x='60' width='11' height='11'/%3E%3Crect fill='%23e58f73' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%23e69173' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%23e69474' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%23e79775' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%23e79a75' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%23e89c76' x='70' width='11' height='11'/%3E%3Crect fill='%23e89f77' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%23e8a278' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%23e9a47a' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23e9a77b' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23e9aa7c' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23e9ac7e' x='80' width='11' height='11'/%3E%3Crect fill='%23eaaf7f' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23eab281' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23eab482' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23eab784' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23eaba86' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23ebbc88' x='90' width='11' height='11'/%3E%3Crect fill='%23ebbf8a' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23ebc18c' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23ebc48e' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23ebc790' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23ebc992' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23ebcc94' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23ebce97' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23ebd199' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23ecd39c' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23ecd69e' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23ecd8a1' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23ecdba4' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23ecdda6' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23ece0a9' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23ede2ac' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23ede4af' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23ede7b2' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23ede9b5' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23eeecb8' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23EEB' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+.formdiv {
+  background-color: #beeefb;
+  height: 50vh;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15rem auto;
+  position: relative;
+  border-radius: 23px ;
+}
+
+.box {
+  background-color: #f1fdcd;
+  width:50%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  
+}
+
+.box::after,
+.box::before {
+  content: "";
+  position: absolute;
+  width:100%;
+  height:100%;
+  background-color: #f1fdcd;
+  z-index: -200;
+    
+  }
+
+
+.box::before{
+    top: 3rem;
+    border-radius:23px;
+  }
+
+.box::after {
+    bottom: 3rem;
+    border-radius: 23px;
+  }
+
+.box2 {
+  background-color: #053271;
+  width: 50%;
+  margin-left: 40%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  border-radius: 0 23px 23px 0;
+}
+
+.loginForm {
+  color: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0rem 4rem;
+  padding-right: 52%;
+
+  z-index: 100;
+}
+
+#password{
+  background-color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #053271;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+#username{
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid #053271;
+  padding: 1rem 2rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+}
+
+#password:focus{
+  outline: none;
+  border: none;
+  border: 2px solid #053271;
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+}
+
+#username:focus{
+  outline: none;
+  border: none;
+  border: 2px solid #053271;
+  
+}
+
+#loginButton{
+  border-radius: 3px;
+  padding: 1rem 3.5rem;
+  margin-top: 1rem;
+  border: 1px solid black;
+  background-color: black;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+
+  box-shadow: 0 7px #999;
+}
+
+#loginButton:hover {
+  background-color: #1b1b1b;
+}
+
+#loginButton:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#loginButton:focus {
+  outline: none;
+}
+
+#title {
+  font-size: 100rem;
+  margin-bottom: 2rem;
+  /* font-family: 'Grape Nuts'; */
+}
+
+.forgot{
+  text-decoration: none;
+  color: #333;
+  font-size: 1.4rem;
+  margin: 1rem 0 ;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 30%;
+  font-size: 10rem;
+  font-family: 'Quicksand';
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 42px rgb(220, 156, 28),
+      0 0 82px rgb(220, 156, 28),
+      0 0 102px rgb(220, 156, 28),
+      0 0 151px rgb(220, 156, 28);
+
+}
+
+img {
+  width:200px;
+  height: 200px;
+  padding-right: 5px;
+  margin: 10px;
+}
+
+
