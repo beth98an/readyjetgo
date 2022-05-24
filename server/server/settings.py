@@ -35,6 +35,7 @@ DJANGO_SUPERUSER_EMAIL = 'digitalninga@email.com'
 # Application definition
 
 INSTALLED_APPS = [
+    'quiz.apps.QuizConfig',
     'lobbies.apps.LobbiesConfig',
     'travel.apps.TravelConfig',
     'users.apps.UsersConfig',
