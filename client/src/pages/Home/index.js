@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       <Header />
-      <div>You seem like you want the travel bug, well you have come to the right place!</div>
+      <div role="Home">You seem like you want the travel bug, well you have come to the right place!</div>
     </>
   );
 }

@@ -1,9 +1,9 @@
-import React from 'react'
-import Maps from '../../components/Map'
-
+import React from 'react';
+import Maps from '../../components/Map';
+import "./results.css";
 function Results() {
   return (
-      <div style={{width:'100%', height:'100%'}}>
+      <div className="map"style={{width:'75%', height:'75%'}}>
           <Maps city='london'/>
       </div>
   )
