@@ -40,7 +40,7 @@ function Login() {
   }
 
   if (redirect) {
-    return navigate('/home')
+    navigate('/home')
   }
   
 
@@ -54,9 +54,9 @@ function Login() {
       <form role = "login" data-testid="loginform" className="loginForm" onSubmit={handleSubmit}>
         <h1 id="title">Sign In</h1>
         <input type='text' placeholder="Username"id="username" onChange={(e) => setUsername(e.target.value)}></input>
-        <input type='password' placeholder="Pasword" id='password' onChange={(e) => setPassword(e.target.value)}></input>
-        <a class="forgot" href="#">Forgot Your Password?</a>
-        <a class="forgot" href="/register">Not a member?  Create Account Now</a>
+        <input type='password' placeholder="Password" id='password' onChange={(e) => setPassword(e.target.value)}></input>
+        <a className="forgot" href="#">Forgot Your Password?</a>
+        <a className="forgot" href="/register">Not a member?  Create Account Now</a>
         <input type='submit' id="loginButton" value='Sign in'></input>
         
       </form>

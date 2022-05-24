@@ -1,5 +1,6 @@
 const initState = {
-    username: ''
+    username: '',
+    answers: {}
 }
 
 const reducer = (state = initState, action) => {
@@ -11,6 +12,12 @@ const reducer = (state = initState, action) => {
             }
         case "RESET":
             return initState
+        
+        case "ADD_ANSWERS":
+            return {
+                ...state,
+                answers: action.value
+            }
 
         default:
             return state;
