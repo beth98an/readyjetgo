@@ -6,22 +6,22 @@ function index() {
   return (
     <nav className="navbar">
       <NavLink classname="home" to='/home' style={({ isActive }) => ({
-              color: isActive ? '#fff' : '#545e6f',
-              background: isActive ? '#7600dc' : '#f0f0f0',
+              color: isActive ? '' : '#545e6f',
+              background: isActive ? '' : '#f0f0f0',
               fontSize: '2rem',
-              margin: '5px'
+              margin: '50px'
             })}>Home</NavLink>
       <NavLink classname="main" to='/main' style={({ isActive }) => ({
-              color: isActive ? '#fff' : '#545e6f',
-              background: isActive ? '#7600dc' : '#f0f0f0',
+              color: isActive ? '' : '',
+              background: isActive ? '' : '',
               fontSize: '2rem',
-              margin: '5px'
+              margin: '50px'
             })}>Main</NavLink>
       <NavLink classname="login" to='/login' style={({ isActive }) => ({
-              color: isActive ? '#fff' : '#545e6f',
-              background: isActive ? '#7600dc' : '#f0f0f0',
+              color: isActive ? '' : '',
+              background: isActive ? '' : '',
               fontSize: '2rem',
-              margin: '5px'
+              margin: '50px'
             })}>Log out</NavLink>
     </nav>
   )
