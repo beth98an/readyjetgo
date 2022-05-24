@@ -11,19 +11,8 @@ import thunk from 'redux-thunk';
 import reducer from '../redux/reducers';
 import { MemoryRouter } from "react-router-dom";
 
-// copied testprovider function from my lap 3 project needs to be altered for ours
-
 const TestProviders = ({ initState }) => {
-    initState ||= {playerOne: '',
-    playerTwo: '',
-    playerThree: '',
-    playerFour: '',
-    question_cat: 9,
-    question_difficulty: 'easy',
-    amount_of_questions:10,
-    num_players:1,
-    quizData: [],
-    score:0};
+    initState ||= {username: ''};
     let testReducer = () => reducer(initState, { type: '@@INIT' })
     const testStore = createStore(testReducer, applyMiddleware(thunk))
 

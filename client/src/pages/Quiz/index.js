@@ -57,7 +57,7 @@ class TravelSurvey extends Component {
             name = <div>
                 <h1>Please Enter Name!</h1>
                 <form onSubmit={this.travellerNameSubmit}>
-                    <input className="sName" type="text" placeholder="Please Enter Your Name" ref="name"/>
+                    <input className="sName" role="quiz" type="text" placeholder="Please Enter Your Name" ref="name"/>
                 </form>
             </div>
         }
