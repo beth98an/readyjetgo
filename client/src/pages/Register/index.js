@@ -29,8 +29,8 @@ function Register() {
         <>
             <Header />
             <div className="formdiv">
-                <form className="registerForm" onSubmit={handleSubmit}>
-                <h1 id="title">Register</h1>
+                <form role="register" className="registerForm" onSubmit={handleSubmit}>
+                <h1 id="title" data-testid="h1">Register</h1>
                     <input type='text' placeholder='Enter username' id="username" onChange={(e) => setUsername(e.target.value)}></input>
                     <input type='password' placeholder='Enter password' id='password' onChange={(e) => setPassword(e.target.value)}></input>
                     <input type='password' placeholder='Confirm password' id='confirm_password' onChange={(e) => setConfirmPass(e.target.value)}></input>
