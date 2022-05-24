@@ -19,7 +19,8 @@ class App extends React.Component {
 
     render() {
         return(
-            <div>    
+            <div className="spinner">  
+            <h1 className="spinnerTitle">Wheel of Travel</h1>  
                 
             <div className="arrow" data-testid='arrow'></div>
                 <ul className={this.state.name}>
@@ -86,6 +87,7 @@ class App extends React.Component {
                 </ul>
                 <button className="spin-button"
                 onClick={this.startRotation}>SPIN</button>
+                
             </div>
         )
     }
