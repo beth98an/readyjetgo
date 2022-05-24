@@ -6,3 +6,9 @@ test("it renders the Login component", () => {
     let login = screen.getByRole("login");
     expect(login).toBeInTheDocument();
   });
+
+test("has an id of RJG", () => {
+    renderWithReduxProvider(<Login />);
+    let RJGid = screen.getByTestId("RJG");
+    expect(RJGid).toBeInTheDocument();
+})

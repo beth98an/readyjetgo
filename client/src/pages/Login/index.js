@@ -64,7 +64,7 @@ function Login() {
         <div className="box">
         </div>
         
-          <div className="box2">
+          <div className="box2" data-testid='RJG'>
             <h2>Ready, Jet, Go!</h2>
             <img id="areo" src="https://cdn-icons-png.flaticon.com/512/201/201623.png"></img>
         </div>
