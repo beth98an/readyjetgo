@@ -6,7 +6,7 @@ function Results() {
   const dest = place.replace(/\s/g, '%20').toLowerCase()
   console.log(dest)
   return (
-      <div className="mapper"style={{width:'75%', height:'75%'}}>
+      <div className="mapper" role='map' style={{width:'75%', height:'75%'}}>
           <Maps city={dest}/>
       </div>
   )

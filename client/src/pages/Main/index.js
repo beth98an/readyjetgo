@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import NavBar from '../../layout/NavBar';
 import "./main.css";
-import RandomLocation from '../../components/RandomLocation'
+import RandomLocation from '../../components/RandomLocation/RandomLocation'
 import App from '../../components/Spinner/Spinner';
 
 function Auth() {
@@ -40,7 +40,7 @@ function Auth() {
         <App />
         <RandomLocation/>
             
-            <button id="quizButton" onClick={() => navigate('/quiz')}>Take a quiz</button>
+            <button id="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Take a quiz</button>
 
 
             
