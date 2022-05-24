@@ -13,7 +13,6 @@ function Login() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [redirect, setRedirect] = useState(false)
-  const [click, setClick] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault()
