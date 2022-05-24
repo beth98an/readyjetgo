@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@900&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Indie+Flower&family=Lobster&family=Poppins:wght@100&family=Quicksand&display=swap');
+#randomButton {
+  border-radius: 3px;
+  padding: 1rem 3.5rem;
+  margin-top: 15rem;
+  border: 1px solid black;
+  background-color: black;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 0 7px #999;
+  position: relative;
+  margin-left: 600px;
+  bottom:100px;
+}
+
+#image {
+  border-radius: 4px;
+  padding: 5px;
+  width: 25%;
+}
+
+p {
+    font-size: 5rem;
+    font-family:'Poppins'
+}
