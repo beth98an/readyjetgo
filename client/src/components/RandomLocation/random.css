@@ -17,9 +17,10 @@
 }
 
 .randomimg {
-  padding: 5px;
+  padding-bottom: 100px;
   width: 25%;
   opacity: 0;
+  
 }
 
 p {

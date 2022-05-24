@@ -8,6 +8,7 @@ import PrivateRoute from './components/PrivateRoute';
 import TravelSurvey from './pages/Quiz';
 import Results from './pages/Results';
 import Lobby from './pages/Lobby';
+import RandomLocation from './components/RandomLocation/RandomLocation';
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/quiz" element={<TravelSurvey />} />
         <Route path="/result" element={<Results />} />
         <Route path="/lobby" element={<Lobby />} />
+        <Route path="/random" element={<RandomLocation />} />
       </Routes>
     </>
   );

@@ -57,9 +57,8 @@ function Home() {
         </Carousel>
 
         </div>
-        <RandomLocation/>
-            
-            <button id="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Take a quiz</button>
+        <button className="randomButton" data-testid='quizbtn' role='main' onClick={() => navigate('/random')}>Random Destination</button>
+            <button className="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Take a quiz</button>
       </div>
 
     </>
