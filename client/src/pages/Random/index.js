@@ -9,7 +9,7 @@ function Random() {
   return (
       
     <div className='App' role='randomiser'>
-        <NavBar />
+        {/* <NavBar /> */}
             
             
     
