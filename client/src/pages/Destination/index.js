@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import './destination.css'
 
 function Destination() {
     const dispatch =  useDispatch()
@@ -71,17 +72,17 @@ function Destination() {
     }
 
     const places = (list) =>{
-        return list[0].map((p, index) => <div key={index} >
-            <h1>{p.Name}, {p.Country}</h1>
-            <img alt={p.Name} onClick={(e)=>handleClick(e)} src={p.Img}></img>
+        return list[0].map((p, index) => <div key={index}>
+            <h1 className="h1Des">{p.Name}, {p.Country}</h1>
+            <img className="imgDes"alt={p.Name} onClick={(e)=>handleClick(e)} src={p.Img}></img>
         </div>)
     }
 
   return (
     <div>
-        <h1>Here are you options for destinations!</h1>
-        <p>Click to choose</p>
-        {finalList?<div>{places(finalList)}</div>:<h4>Loading</h4>}
+        <h1 id="optionsTitle">Here Are  Your Destination Options!</h1>
+        <p id="clickTitle">Click Your Desired Destination to Start Your Travels...</p>
+        {finalList?<div id='placesDiv'>{places(finalList)}</div>:<h4>Loading</h4>}
     </div>
   )
 }

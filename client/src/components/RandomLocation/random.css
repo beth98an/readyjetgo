@@ -3,7 +3,6 @@
 #randomButton {
   margin-right: 100px;
     border-radius: 3px;
-    padding: 1rem 3.5rem;
     margin-bottom: 50px;
     color: #fff;
     text-shadow:
@@ -20,13 +19,12 @@
     letter-spacing: 1px;
     position: absolute;
     box-shadow: 0 7px #999;
-    margin-left: 10px;
+    margin-left: 425px;
     top: 290px;
     font-size: 2.5rem;
     animation: pulsate 1.5s infinite alternate;  
     border: 0.2rem solid #fff;
     border-radius: 2rem;
-    padding: 0.4em;
     box-shadow: 0 0 .2rem #fff,
               0 0 .2rem #fff,
               0 0 2rem #053271,
@@ -56,8 +54,8 @@
     text-transform: uppercase;
     cursor: pointer;
     letter-spacing: 1px;
-     position: relative;
-    margin-left: 350px;
+    position: relative;
+    margin-left: 80px;
     top: 300px;
     box-shadow: 0 7px #999;
     font-size: 2.5rem;
@@ -78,10 +76,11 @@
     background-color: #f1fdcd;
     border-radius: 23px 23px 23px 23px;
     width: 90%;
-    height: 700px;
+    height: 750px;
     margin-left: 80px;
     position: relative;
     bottom: -100px;
+    margin-top: -30px;
 }
 
 #locationName {
@@ -93,7 +92,7 @@
 .randomimg {
   /* padding-bottom: 10px; */
   width: 50%;
-  height: 25%;
+  height: 20%;
   margin-top: 50px;
   /* opacity: 0; */
   
@@ -113,5 +112,10 @@ p {
   /* padding-right: 50px; */
   margin-right: 50px;
 }
+
+.hidden1 {
+  margin-top: -50px;
+}
+
 
 
