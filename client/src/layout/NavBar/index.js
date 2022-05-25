@@ -5,18 +5,18 @@ import "./navbar.css"
 function index() {
   return (
     <nav className="navbar">
-      <NavLink classname="home" role="nav-home" to='/home' style={({ isActive }) => ({
+      <NavLink exact className= "home-nav" activeClassName="home" role="nav-home" to='/home' style={({ isActive }) => ({
               color: isActive ? '' : '',
               background: isActive ? '' : '',
               fontSize: '2rem',
               margin: '50px',
               
             })}>Home</NavLink>
-      <NavLink classname="main" to='/main' style={({ isActive }) => ({
+      <NavLink exact activeClassName="main" className= "main-nav" to='/main' style={({ isActive }) => ({
               fontSize: '2rem',
               margin: '50px'
             })}>Spinner</NavLink>
-      <NavLink classname="login" to='/login' style={({ isActive }) => ({
+      <NavLink exact className= "logout-nav" activeClassName="login" to='/login' style={({ isActive }) => ({
               color: isActive ? '' : '',
               background: isActive ? '' : '',
               fontSize: '2rem',
