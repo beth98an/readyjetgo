@@ -17,7 +17,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const responseToken = await fetch('http://127.0.0.1:8000/api/login/', {
+    const responseToken = await fetch('https://readyjetgoserve.herokuapp.com/api/login/', {
       method: 'POST',
       body: JSON.stringify({ username: username, password: password }),
       headers: { 'Content-Type': 'application/json' }
@@ -28,7 +28,7 @@ function Login() {
 
     if (token.jwt) {
 
-      const responseAuth = await fetch('http://127.0.0.1:8000/api/auth/', {
+      const responseAuth = await fetch('https://readyjetgoserve.herokuapp.com/api/auth/', {
         method: 'POST',
         body: JSON.stringify({ token: token.jwt }),
         headers: { 'Content-Type': 'application/json' }
