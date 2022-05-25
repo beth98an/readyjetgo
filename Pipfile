@@ -15,6 +15,7 @@ channels-redis = "*"
 gunicorn = "*"
 whitenoise = "*"
 dj-database-url = "*"
+django-on-heroku = "*"
 
 [dev-packages]
 pytest = "*"
