@@ -41,17 +41,19 @@ function TravelSurvey() {
 
     return(
             <div>
+
                 <h1 className='quizTitle'>Quiz Time</h1>
+                <div id="qustionBox">
             
                 <form onSubmit={(e)=>surveySubmit(e)}>
 
-                    <div className="card" role='quiz'>
+                    <div className="cardQuiz" role='quiz'>
                         <label htmlFor='ans1'>What type of holiday are you looking for?</label><br/>
                         <input type="radio" name="ans1" value="City" onChange={updateAns1}/> City
                         <input type="radio" name="ans1" value="Beach" onChange={updateAns1}/> Beach
                     </div>
 
-                    <div className="card">
+                    <div className="cardQuiz">
                         <label htmlFor='ans2'>Which continent would you like to visit?</label><br/>
                         <input type="radio" name="ans2" value="Europe" onChange={updateAns2}/> Europe
                         <input type="radio" name="ans2" value="Asia" onChange={updateAns2}/> Asia
@@ -85,6 +87,7 @@ function TravelSurvey() {
                     </div> */}
                     <input className="feedback-button" type="submit" value="submit"/>
                 </form>
+                </div>
             </div>
         )
 }

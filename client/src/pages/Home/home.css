@@ -6,15 +6,24 @@
     margin: 1rem 0 ;
     padding:1rem;
   }
+  #welcomeSign {
+    /* background-color: #053271; */
+    border-radius: 23px 23px 23px 23px;
+    margin-left: 20px;
+  }
 
   .homeTitle {
     text-align: center;
     font-size: 9rem;
-    font-family: 'Grape Nuts';
+    font-family: 'sans-serif';
   }
 
   .carousel {
-    margin: 100px;
+    margin-top: 100px;
+  }
+
+  .carousel1 {
+    padding-top: 90px;
   }
 
   .randomButton {
@@ -97,12 +106,17 @@
   }
 
   .boxContainer {
-    background-color: #053271;
+    background-color: #f1fdcd;
     border-radius: 23px 23px 23px 23px;
     width: 90%;
-    height: 590px;
+    height: 600px;
     margin-left: 80px;
     position: relative;
-    bottom: 20px;
+    top: -60px;
+
     
+  }
+
+  .one {
+    background-color: red;
   }

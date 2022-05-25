@@ -46,22 +46,24 @@ function Home() {
       <div className="Home"
         role="Home">
         <h1 className="homeTitle">Welcome {user},</h1>
-        <div className='boxContainer'>
-          <div className="carousel">
-            <Carousel breakPoints={breakPoints}>
-              <Card className="one" text="1" />
-              <Card text="2" />
-              <Card text="3" />
-              <Card text="4" />
-              <Card text="5" />
-              <Card text="6" />
-              <Card text="7" />
-            </Carousel>
-
-          </div>
-          <button className="randomButton" data-testid='quizbtn' role='main' onClick={() => navigate('/random')}>Random Destination</button>
-          <button className="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Take a quiz now</button>
         </div>
+        <div className='boxContainer'>
+        <div className="carousel">
+        <Carousel className="carousel1" breakPoints={breakPoints}>
+          <Card className="one" text="1"/>
+          <Card text="2"/>
+          <Card text="3"/>
+          <Card text="4"/>
+          <Card text="5"/>
+          <Card text="6"/>
+          <Card text="7"/>
+        </Carousel>
+        </div>
+
+        
+        <button className="randomButton" data-testid='quizbtn' role='main' onClick={() => navigate('/random')}>Random Destination</button>
+            <button className="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Take a quiz now</button>
+            
       </div>
 
     </>
