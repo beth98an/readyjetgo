@@ -14,5 +14,22 @@ nav {
 }
 
 .main {
-    font-size: 5rem;
+    font-size: 8rem;
+    color: tomato;
 }
+
+.login {
+  font-size: 8rem;
+  color: tomato;
+}
+.home {
+  font-size: 8rem;
+  color: tomato;
+}
+
+.main-nav:hover {
+  color: tomato;
+}
+
+
+
