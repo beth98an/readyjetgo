@@ -49,13 +49,13 @@ function Home() {
         <div className='boxContainer'>
         <div className="carousel">
         <Carousel breakPoints={breakPoints}>
-          <Card className="one" text="Lorem ipsum"/>
-          <Card text="1"/>
-          <Card text="1"/>
-          <Card text="1"/>
-          <Card text="1"/>
-          <Card text="1"/>
-          <Card text="1"/>
+          <Card className="one" text="1"/>
+          <Card text="2"/>
+          <Card text="3"/>
+          <Card text="4"/>
+          <Card text="5"/>
+          <Card text="6"/>
+          <Card text="7"/>
         </Carousel>
 
         </div>

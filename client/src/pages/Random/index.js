@@ -8,7 +8,7 @@ function Random() {
     
   return (
       
-    <div className='App'>
+    <div className='App' role='randomiser'>
         <NavBar />
             
             
