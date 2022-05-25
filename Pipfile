@@ -16,8 +16,6 @@ gunicorn = "*"
 whitenoise = "*"
 dj-database-url = "*"
 django-on-heroku = "*"
-pytest = "*"
-pytest-cov = "*"
 coverage = "*"
 
 [dev-packages]

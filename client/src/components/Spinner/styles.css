@@ -104,6 +104,7 @@ li:nth-child(12) {
     border-radius: 50%;
     list-style: none;
     overflow: hidden;
+    margin-top: 70px;
 } 
 
 li {
@@ -130,6 +131,14 @@ li {
     font-size: 18px; 
  } 
 
+ #tester {
+    background-color: red;
+    width: 25%;
+    padding: 10px;
+    top: 20px;
+    
+    }
+
 
   .arrow {
     width: 0;
@@ -139,7 +148,7 @@ li {
     border-top: 50px solid black;
     position: absolute;
     left: 49%;
-    top: 208px;
+    top: 273px;
     z-index: 1;
 }
 
@@ -178,7 +187,8 @@ li {
 .spinnerTitle {
     text-align: center;
     font-size: 9rem;
-    font-family: 'Grape Nuts';
+    font-family: 'sans-serif';
+    color: #333;
 }
 
 .instructions {
