@@ -41,9 +41,8 @@ function TravelSurvey() {
 
     return(
             <div>
-                <h1>Welcome {name} to our survey</h1>
+                <h1 className='quizTitle'>Quiz Time</h1>
             
-                <h2>Here are some Questions</h2>
                 <form onSubmit={(e)=>surveySubmit(e)}>
 
                     <div className="card" role='quiz'>

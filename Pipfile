@@ -13,6 +13,8 @@ psycopg2 = "*"
 channels = "*"
 channels-redis = "*"
 gunicorn = "*"
+whitenoise = "*"
+dj-database-url = "*"
 
 [dev-packages]
 pytest = "*"
