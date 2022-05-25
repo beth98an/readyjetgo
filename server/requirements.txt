@@ -8,6 +8,7 @@ cffi==1.15.0
 channels==3.0.4
 channels-redis==3.4.0
 constantly==15.1.0
+coverage==6.4
 cryptography==37.0.2
 daphne==3.0.2
 dj-database-url==0.5.0
