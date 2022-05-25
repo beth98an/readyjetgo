@@ -50,18 +50,19 @@ function Home() {
         <div className='boxContainer'>
         <div className="carousel">
         <Carousel className="carousel1" breakPoints={breakPoints}>
-          <Card className="one" text="1"/>
-          <Card text="2"/>
-          <Card text="3"/>
-          <Card text="4"/>
-          <Card text="5"/>
-          <Card text="6"/>
-          <Card text="7"/>
+          <Card className="one" text="Review 1"/>
+          <Card text="Review 2"/>
+          <Card text="Review 3"/>
+          <Card text="Review 4"/>
+          <Card text="Review 5"/>
+          <Card text="Review 6"/>
+          <Card text="Review 7"/>
         </Carousel>
         </div>
 
         
         <button className="randomButton" data-testid='quizbtn' role='main' onClick={() => navigate('/random')}>Random Destination</button>
+        <button className="chatButton" data-testid='quizbtn' role='main' onClick={() => navigate('/chat')}>Chat Now</button>
             <button className="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Take a quiz now</button>
             
       </div>
