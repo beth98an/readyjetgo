@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import "./random.css"
+import { useNavigate } from 'react-router-dom';
 
 const RandomLocation = () => {
+    const navigate = useNavigate()
     const [locations, setLocations] = useState('')
     
     const getLocation = () => {
@@ -16,12 +18,31 @@ const RandomLocation = () => {
 
     return (
         <>
+        
+        {/* <div className="qouteBox">
+        <h1>"Pack your bags we are going travelling"</h1>
+        </div> */}
+        
+        
+        
+        <div className="randomContainer">
+        <button className="backRandomButton" onClick={()=>navigate('/home')}>Return Home</button>
+        <button className='hidden' id="randomButton" data-testid='randombtn' onClick={getLocation}>Random Location</button>
+        
+            
         {locations?
         <div className="button hidden1" role='hiddenbtn'>
-            <p>{locations.Name}</p>
+            <p id="locationName">{locations.Name}</p>
             <img className="randomimg"src={locations.Img}></img>
         </div>:<div></div>}
-        <button className='hidden' id="randomButton" data-testid='randombtn' onClick={getLocation}>Random Location</button>
+        
+        
+        </div>
+        <div>
+        
+        </div>
+        
+        
         </>
 
     )

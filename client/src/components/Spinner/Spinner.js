@@ -85,8 +85,10 @@ class App extends React.Component {
                         spellcheck="false">12</div>
                     </li>
                 </ul>
+                <div id="tester">Hello</div>
                 <button className="spin-button"
                 onClick={this.startRotation}>SPIN</button>
+               
                 
             </div>
         )

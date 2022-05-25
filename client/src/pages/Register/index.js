@@ -17,12 +17,12 @@ function Register() {
             body: JSON.stringify({ username: username, password: password, password_confirmation: confirmPass }),
             headers: { 'Content-Type': 'application/json' }
         }
-        await fetch('http://127.0.0.1:8000/api/register/', options)
+        await fetch('https://readyjetgoserve.herokuapp.com/api/register/', options)
         setRedirect(true)
     }
 
     if (redirect) {
-       navigate('/login')
+        navigate('/login')
     }
 
     return (
