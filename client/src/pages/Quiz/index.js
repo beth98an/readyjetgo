@@ -46,7 +46,7 @@ function TravelSurvey() {
                 <h2>Here are some Questions</h2>
                 <form onSubmit={(e)=>surveySubmit(e)}>
 
-                    <div className="card">
+                    <div className="card" role='quiz'>
                         <label htmlFor='ans1'>What type of holiday are you looking for?</label><br/>
                         <input type="radio" name="ans1" value="City" onChange={updateAns1}/> City
                         <input type="radio" name="ans1" value="Beach" onChange={updateAns1}/> Beach

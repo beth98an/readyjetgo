@@ -43,7 +43,7 @@ function Destination() {
     }
 
     const places = (list) =>{
-        return list.map((p, index) => <div key={index}>
+        return list.map((p, index) => <div key={index} role='destinations'>
             <h1>{p.Name}, {p.Country}</h1>
             <img alt={p.Name} src={p.Img}></img>
         </div>)
