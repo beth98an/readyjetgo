@@ -37,7 +37,7 @@ class TravelList (APIView):
 class TravelInd (APIView):
     def get_object(self, id):
         try:
-            return Travel.objects.get(pk=id)
+            return Travel.objects.get(pk=id),200
         except Travel.DoesNotExist:
             raise Http404
 
