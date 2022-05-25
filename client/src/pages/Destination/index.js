@@ -1,51 +1,79 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 function Destination() {
+    const dispatch =  useDispatch()
+    const navigate = useNavigate()
     const ans = useSelector(state => state.answers)
     const [destinations, setDestinations] = useState([])
    
     let filtered = []
-
-    useEffect(() => {
-        axios.get('https://holidaylocatapi.herokuapp.com/locations')
-        .then(resp => setDestinations(resp.data.map(d => d)))
-    }, [])
-
-    console.log(destinations)
-    for (let i=0; i< destinations.length; i++){
-        // console.log(destinations[i])
-        if (destinations[i].Continent === ans.ans2){
-            // console.log(destinations[i])
-            if(destinations[i].cityBeach === ans.ans1){
-                console.log(destinations[i])
-                let dest = destinations[i]
-                console.log('a', dest)
-                filtered.push(destinations[i])
-            }
-        }
-    }
-    console.log(ans)
-    console.log(filtered)
+    let finalList = []
 
     const random_int = (list)=> {
-        let num = Math.floor(Math.random()* list.length)
-        console.log(num)
-        return num
+        for (let i = list.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (list.length));
+            [list[i], list[j]] = [list[j], list[i]];
+        }
     }
-    
-    let finalList = []
-    for (let i=0; i<3; i++){
-        if (!finalList.indexOf(filtered[random_int(filtered)])){}
-        finalList.push(filtered[random_int(filtered)])
+    useEffect(() => {
+        axios.get('https://holidaylocatapi.herokuapp.com/locations')
+        .then(resp => setDestinations(resp.data.map(d => d))) 
+        
+    }, [])
+    const filter =()=>{
+        for (let i=0; i< destinations.length; i++){
+        // console.log(destinations[i])
+            if (destinations[i].Continent === ans.ans2){
+            // console.log(destinations[i])
+                if(destinations[i].cityBeach === ans.ans1){
+                    console.log(destinations[i])
+                    let dest = destinations[i]
+                    console.log('a', dest)
+                    filtered.push(destinations[i])
+                }
+            }
+        }
+        final()
+    }
+    console.log(destinations)
+    const final = () =>{
+        random_int(filtered)
+        console.log(filtered)
+        finalList.push(filtered.slice(0,3))
         console.log(finalList)
+        } 
+    console.log(ans)
+    if (destinations){
+        filter()
+    }
+
+    const add_dest = (obj => async(dispatch)=>{
+        dispatch({
+            type: "ADD_DEST",
+            value: obj
+        })
+    })
+
+    const handleClick=(e)=>{
+        let dest = e.target.alt
+        console.log(dest)
+        for(let i=0; i<finalList[0].length;i++){
+            if (finalList[0][i].Name === dest){
+                dest = `${finalList[0][i].Name} ${finalList[0][i].Country}`
+                console.log(dest)
+            }
+        }
+        dispatch(add_dest(dest))
+        navigate('/result')
     }
 
     const places = (list) =>{
-        return list.map((p, index) => <div key={index} role='destinations'>
+        return list[0].map((p, index) => <div key={index} >
             <h1>{p.Name}, {p.Country}</h1>
-            <img alt={p.Name} src={p.Img}></img>
+            <img alt={p.Name} onClick={(e)=>handleClick(e)} src={p.Img}></img>
         </div>)
     }
 
@@ -53,7 +81,7 @@ function Destination() {
     <div>
         <h1>Here are you options for destinations!</h1>
         <p>Click to choose</p>
-        {places(finalList)}
+        {finalList?<div>{places(finalList)}</div>:<h4>Loading</h4>}
     </div>
   )
 }

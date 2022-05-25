@@ -1,6 +1,7 @@
 const initState = {
     username: '',
-    answers: {}
+    answers: {},
+    destination: ''
 }
 
 const reducer = (state = initState, action) => {
@@ -18,7 +19,12 @@ const reducer = (state = initState, action) => {
                 ...state,
                 answers: action.value
             }
-
+        case "ADD_DEST":
+            return {
+                ...state,
+                destination: action.value
+            }
+    
         default:
             return state;
     }
