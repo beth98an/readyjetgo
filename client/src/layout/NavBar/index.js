@@ -15,7 +15,7 @@ function index() {
       <NavLink classname="main" to='/main' style={({ isActive }) => ({
               fontSize: '2rem',
               margin: '50px'
-            })}>Daily Spin</NavLink>
+            })}>Spinner</NavLink>
       <NavLink classname="login" to='/login' style={({ isActive }) => ({
               color: isActive ? '' : '',
               background: isActive ? '' : '',

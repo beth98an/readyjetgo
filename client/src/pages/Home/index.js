@@ -3,7 +3,6 @@ import NavBar from '../../layout/NavBar';
 import "./home.css"
 import Carousel from "react-elastic-carousel"
 import Card from '../../components/Card/Card'
-import RandomLocation from '../../components/RandomLocation/RandomLocation'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 
@@ -46,21 +45,23 @@ function Home() {
       <NavBar className="bar" />
       <div className= "Home" 
       role="Home">
-        <h1 className="homeTitle">Welcome {user}</h1>
+        <h1 className="homeTitle">Welcome {user},</h1>
+        <div className='boxContainer'>
         <div className="carousel">
         <Carousel breakPoints={breakPoints}>
-          <Card number="1"/>
-          <Card number="2"/>
-          <Card number="3"/>
-          <Card number="4"/>
-          <Card number="5"/>
-          <Card number="6"/>
-          <Card number="7"/>
+          <Card className="one" text="Lorem ipsum"/>
+          <Card text="1"/>
+          <Card text="1"/>
+          <Card text="1"/>
+          <Card text="1"/>
+          <Card text="1"/>
+          <Card text="1"/>
         </Carousel>
 
         </div>
         <button className="randomButton" data-testid='quizbtn' role='main' onClick={() => navigate('/random')}>Random Destination</button>
-            <button className="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Take a quiz</button>
+            <button className="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Take a quiz now</button>
+      </div>
       </div>
 
     </>
