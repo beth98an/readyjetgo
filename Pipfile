@@ -12,6 +12,7 @@ psycopg2-binary = "*"
 psycopg2 = "*"
 channels = "*"
 channels-redis = "*"
+gunicorn = "*"
 
 [dev-packages]
 pytest = "*"
