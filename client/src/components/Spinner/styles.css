@@ -1,51 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@900&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Indie+Flower&family=Lobster&family=Poppins:wght@100&family=Russo+One&family=Shadows+Into+Light&display=swap');
 
 li:first-child .text {
-    background-color: plum;
+    background-color: #ff7096;
 }
 
 li:nth-child(2) .text {
-    background-color: blueviolet;
+    background-color: #ffd166;
 }
 
 li:nth-child(3) .text {
-    background-color: rgb(192, 168, 215);
+    background-color: #06d6a0;
 }
 
 li:nth-child(4) .text {
-    background-color: rgb(58, 123, 127);
+    background-color: #118ab2;
 }
 
 li:nth-child(5) .text {
-    background-color: rgb(56, 24, 86);
+    background-color: #cae9ff;
 }
 
 li:nth-child(6) .text {
-    background-color: rgb(18, 69, 114);
+    background-color: #ff9f1c;
 }
 
 li:nth-child(7) .text {
-    background-color: rgb(35, 170, 35);
+    background-color: #ffbf69;
 }
 
 li:nth-child(8) .text {
-    background-color: rgb(53, 98, 133);
+    background-color: #ffffff;
 }
 
 li:nth-child(9) .text {
-    background-color: blueviolet;
+    background-color: #cbf3f0;
 }
 
 li:nth-child(10) .text {
-    background-color: rgb(226, 174, 43);
+    background-color: #25ced1;
 }
 
 li:nth-child(11) .text {
-    background-color: rgb(226, 147, 43);
+    background-color: #9c89b8;
 }
 
 li:nth-child(12) .text {
-    background-color: rgb(203, 92, 64);
+    background-color: #e8c2ca;
 }
 
 li:first-child {
@@ -208,8 +208,9 @@ li {
 .spinnerTitle {
     text-align: center;
     font-size: 9rem;
-    font-family: 'Russo One';
+    
     color: #333;
-    letter-spacing: 15px;
+    letter-spacing: 8px;
+    font-family: 'Dancing Script';
 }
 

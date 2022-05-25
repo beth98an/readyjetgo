@@ -7,3 +7,12 @@
     background-color: none;
     color: black;
 }
+
+#readyChatTitle {
+    text-align: center;
+    font-size: 8rem;
+    font-family: 'Dancing Script';
+    letter-spacing: 15px;
+    position: relative;
+    top: 40px;
+}

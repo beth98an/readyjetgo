@@ -45,7 +45,7 @@ function Home() {
       <NavBar className="bar" />
       <div className="Home"
         role="Home">
-        <h1 className="homeTitle">Welcome {user},</h1>
+        <h1 className="homeTitle">Welcome {user}</h1>
         </div>
         <div className='boxContainer'>
         <div className="carousel">
@@ -63,7 +63,7 @@ function Home() {
         
         <button className="randomButton" data-testid='quizbtn' role='main' onClick={() => navigate('/random')}>Random Destination</button>
         <button className="chatButton" data-testid='quizbtn' role='main' onClick={() => navigate('/chat')}>Chat Now</button>
-            <button className="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Take a quiz now</button>
+            <button className="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Find me a holiday</button>
             
       </div>
 
