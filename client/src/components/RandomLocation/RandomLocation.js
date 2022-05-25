@@ -15,12 +15,14 @@ const RandomLocation = () => {
 
 
     return (
+        <>
+        {locations?
         <div className="button hidden1" role='hiddenbtn'>
             <p>{locations.Name}</p>
-            <img classname="randomimg"src={locations.Img}></img>
-            <button className='hidden' id="randomButton" data-testid='randombtn' onClick={getLocation}>Random Location</button>
-            
-        </div>
+            <img className="randomimg"src={locations.Img}></img>
+        </div>:<div></div>}
+        <button className='hidden' id="randomButton" data-testid='randombtn' onClick={getLocation}>Random Location</button>
+        </>
 
     )
 };
