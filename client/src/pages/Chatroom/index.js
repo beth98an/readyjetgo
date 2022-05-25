@@ -15,13 +15,14 @@ class Chatroom extends Component {
       client = new W3CWebSocket('ws://127.0.0.1:8000/ws/chat/' + this.state.room + '/');
 
       onButtonClicked = (e) => {
+        e.preventDefault();
         this.client.send(JSON.stringify({
           type: "message",
+          name: this.state.name,
           message: this.state.value,
-          name: this.state.name
+          
         }));
-        this.state.value = ''
-        e.preventDefault();
+        this.setState.value = ''
       }
     
       componentDidMount() {
@@ -30,14 +31,15 @@ class Chatroom extends Component {
         };
         this.client.onmessage = (message) => {
             const dataFromServer = JSON.parse(message.data);
+            console.log(dataFromServer)
             console.log('got reply! ', dataFromServer.type);
             if (dataFromServer) {
               this.setState((state) =>
                 ({
                   messages: [...state.messages,
                   {
-                    msg: dataFromServer.message,
                     name: dataFromServer.name,
+                    msg: dataFromServer.message,
                   }]
                 })
               );
@@ -51,20 +53,21 @@ class Chatroom extends Component {
                 {this.state.isLoggedIn ? <div style={{ marginTop: 50}}>
                 Room Name: {this.state.room}
 
-                <div className="chat-window" style={{ height: 500, maxHeight: 500, overflow: 'auto'}}>
+                <div className="chat-window">
                 {this.state.messages.map(message => <>
                     <div className="card">
-                        <div className="card-header" title={message.name} subheader={message.msg}>
+                        <div className="card-header">
+                        <p>{message.name}</p>
+                        <p>{message.msg}</p>
                         </div>
                     </div>
                 </>)}
                 </div>
 
-                <form className="chat-form" noValidate onSubmit={this.onButtonClicked}>
+                <form className="form" noValidate onSubmit={this.onButtonClicked}>
                     <textarea 
                     id="outlined-helperText"
                     label="Make a comment"
-                    defaultValue="Default Value"
                     variant="outlined"
                     value={this.state.value}
                     onChange={e => {
@@ -73,19 +76,22 @@ class Chatroom extends Component {
                     }}
                     />
                     <button
-                    type="submit"
+                    type="button"
                     variant="contained"
                     color="primary"
                     className="submit"
-                    >Let's Chat!
+                    onClick={this.onButtonClicked}
+                    >Send Message!
                     </button>
                 </form>
                 </div> 
-                : 
+                
+                :
+                 
                 <div className="chatroom">
                 <h1>Ready Jet Go Chat!</h1>
 
-                <form className="chatroom-form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
+                <form className="form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
                     <textarea 
                     variant="outlined"
                     margin="normal"
@@ -98,21 +104,23 @@ class Chatroom extends Component {
                     onChange={e => {
                         this.setState({ room: e.target.value });
                         this.value = this.state.room;
+                        // Makes the input form change 
                   }}
                     />
                     <textarea
                     variant="outlined"
                     margin="normal"
                     required
-                    name="Username"
-                    label="Username"
-                    type="Username"
+                    name="username"
+                    label="username"
+                    type="username"
                     id="Name"
                     value={this.state.name}
                     onChange={e => {
                         this.setState({ name: e.target.value });
                         this.value = this.state.name;
                     }}
+                    
                     />
                     <button
                     type="submit"
@@ -120,7 +128,7 @@ class Chatroom extends Component {
                     color="primary"
                     className="submit"
                     >
-                    Let's Chat!
+                    Let's chat!
                     </button>
                 </form>
                 </div>}
