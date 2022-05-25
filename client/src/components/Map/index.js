@@ -6,9 +6,11 @@ import './map.css'
 const Maps = (props) => {
   const [location, setLocation] = useState([0, 0]);
   const cityy = props.city
+  const dest = cityy.replace(/\s/g, '%20').toLowerCase()
+  console.log(dest)
 
   useEffect(() => {
-    axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${cityy}.json?access_token=pk.eyJ1IjoiYmV0aDk4YW4iLCJhIjoiY2wzaXRwYnBtMDA3bjNqcDhvcG05Z3N4YyJ9.VHEO6heZljZu6jzliXUzww`)
+    axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${dest}.json?access_token=pk.eyJ1IjoiYmV0aDk4YW4iLCJhIjoiY2wzaXRwYnBtMDA3bjNqcDhvcG05Z3N4YyJ9.VHEO6heZljZu6jzliXUzww`)
     .then(resp => setLocation(JSON.parse(JSON.stringify(resp.data.features[0].center))))
     
   }, [])
