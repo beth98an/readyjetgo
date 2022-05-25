@@ -20,7 +20,7 @@ class Chatroom extends Component {
           message: this.state.value,
           name: this.state.name
         }));
-        this.state.value = ''
+        this.setState.value = ''
         e.preventDefault();
       }
     
@@ -54,17 +54,18 @@ class Chatroom extends Component {
                 <div className="chat-window" style={{ height: 500, maxHeight: 500, overflow: 'auto'}}>
                 {this.state.messages.map(message => <>
                     <div className="card">
-                        <div className="card-header" title={message.name} subheader={message.msg}>
+                        <div className="card-header"
+                        title={message.name}
+                        subheader={message.msg}>
                         </div>
                     </div>
                 </>)}
                 </div>
 
-                <form className="chat-form" noValidate onSubmit={this.onButtonClicked}>
+                <form className="form" noValidate onSubmit={this.onButtonClicked}>
                     <textarea 
                     id="outlined-helperText"
                     label="Make a comment"
-                    defaultValue="Default Value"
                     variant="outlined"
                     value={this.state.value}
                     onChange={e => {
@@ -85,7 +86,7 @@ class Chatroom extends Component {
                 <div className="chatroom">
                 <h1>Ready Jet Go Chat!</h1>
 
-                <form className="chatroom-form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
+                <form className="form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
                     <textarea 
                     variant="outlined"
                     margin="normal"
@@ -98,21 +99,23 @@ class Chatroom extends Component {
                     onChange={e => {
                         this.setState({ room: e.target.value });
                         this.value = this.state.room;
+                        // Makes the input form change 
                   }}
                     />
                     <textarea
                     variant="outlined"
                     margin="normal"
                     required
-                    name="Username"
-                    label="Username"
-                    type="Username"
+                    name="username"
+                    label="username"
+                    type="username"
                     id="Name"
                     value={this.state.name}
                     onChange={e => {
                         this.setState({ name: e.target.value });
                         this.value = this.state.name;
                     }}
+                    
                     />
                     <button
                     type="submit"
