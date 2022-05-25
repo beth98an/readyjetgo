@@ -10,8 +10,9 @@ function Results() {
   
   return (
     <>
-      <h1>{place}</h1>
-      <button onClick={()=>navigate('/home')}>Go Home</button>
+      <h1 className="locationResultTitle">{place}</h1>
+      <h3 className="locationResultSolgan">"To travel is to live"</h3>
+      <button className="backResultsBtn" onClick={()=>navigate('/home')}>Go Home</button>
       <div className="mapper" role='map' style={{width:'75%', height:'75%'}}>
           <Maps city={place}/>
       </div>
