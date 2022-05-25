@@ -62,6 +62,7 @@ function Home() {
 
         
         <button className="randomButton" data-testid='quizbtn' role='main' onClick={() => navigate('/random')}>Random Destination</button>
+        <button className="chatButton" data-testid='quizbtn' role='main' onClick={() => navigate('/chat')}>Chat Now</button>
             <button className="quizButton" data-testid='quizbtn' role='main' onClick={() => navigate('/quiz')}>Take a quiz now</button>
             
       </div>
