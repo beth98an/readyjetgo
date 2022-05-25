@@ -14,7 +14,7 @@
   }
 
   .carousel {
-    margin: 50px;
+    margin: 100px;
   }
 
   .randomButton {
@@ -98,13 +98,11 @@
 
   .boxContainer {
     background-color: #053271;
-    border-radius: 23px 23px 23px 23px;width: 90%;
-    height: 575px;
+    border-radius: 23px 23px 23px 23px;
+    width: 90%;
+    height: 590px;
     margin-left: 80px;
     position: relative;
     bottom: 20px;
     
   }
-
-  
-
