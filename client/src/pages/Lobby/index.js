@@ -44,14 +44,14 @@ function Lobby() {
 
     return (
         <>
-            <main date-testid='lobbybtn'>
+            <main>
                 {messages.map(message =>
                     <div key={message.id}>
                         <p>{message['username']}</p>
                         <p>{message['msg']}</p>
                     </div>)}
                 <input id="chat-message-input" type="text" value={value} onChange={e => setValue(e.target.value)}></input>
-                <input id="chat-message-submit" type="button" value="Send" onClick={ButtonClicked}></input>
+                <input id="chat-message-submit" date-testid='lobbybtn' type="button" value="Send" onClick={ButtonClicked}></input>
             </main>
         </>
     )
