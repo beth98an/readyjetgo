@@ -2,7 +2,9 @@ import React, { useEffect, Component } from 'react'
 import { w3cwebsocket as W3CWebSocket } from 'websocket';
 import './chat.css';
 
+
 class Chatroom extends Component {
+  
 
     state = {
         isLoggedIn: false,
@@ -24,6 +26,8 @@ class Chatroom extends Component {
         }));
         this.setState.value = ''
       }
+      
+      
     
       componentDidMount() {
         this.client.onopen = () => {
@@ -49,6 +53,7 @@ class Chatroom extends Component {
 
     render() {
         return (
+          
             <div className="container">
                 {this.state.isLoggedIn ? <div style={{ marginTop: 50}}>
                 Room Name: {this.state.room}
@@ -89,7 +94,7 @@ class Chatroom extends Component {
                 :
                  
                 <div className="chatroom">
-                <h1>Ready Jet Go Chat!</h1>
+                <h1 id="readyChatTitle">Ready Jet Go, Chat!</h1>
 
                 <form className="form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
                     <textarea 
@@ -132,6 +137,7 @@ class Chatroom extends Component {
                     </button>
                 </form>
                 </div>}
+          
             </div>
         )
     }

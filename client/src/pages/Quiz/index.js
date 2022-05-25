@@ -42,7 +42,7 @@ function TravelSurvey() {
     return(
             <div>
 
-                <h1 className='quizTitle'>Quiz Time</h1>
+                <h1 className='quizTitle'>2 Steps Away To Find your Perfect Holiday...</h1>
                 <div id="qustionBox">
             
                 <form onSubmit={(e)=>surveySubmit(e)}>
