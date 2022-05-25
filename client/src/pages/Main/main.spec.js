@@ -1,11 +1,11 @@
 import { screen } from "@testing-library/react";
 import Main from "./index";
 
-test("it renders the Main component", () => {
-    renderWithReduxProvider(<Main />);
-    let main = screen.getByRole("main");
-    expect(main).toBeInTheDocument();
-  });
+// test("it renders the Main component", () => {
+//     renderWithReduxProvider(<Main />);
+//     let main = screen.getByRole("main");
+//     expect(main).toBeInTheDocument();
+//   });
 
 test("has an id of quizbtn", () => {
     renderWithReduxProvider(<Main />);

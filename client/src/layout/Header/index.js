@@ -4,7 +4,7 @@ import "./header.css";
 
 function Header() {
   return (
-    <div></div>
+    <div data-testid='header'></div>
   )
 }
 
