@@ -124,7 +124,8 @@
 .quizTitle {
     text-align: center;
     font-size: 9rem;
-    font-family: 'sans-serif';
+    letter-spacing: 15px;
+    font-family: 'Russo One';
     padding: 20px;
     color: #333;
 }
