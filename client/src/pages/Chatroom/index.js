@@ -97,6 +97,7 @@ class Chatroom extends Component {
                 <h1 id="readyChatTitle" role="heading">Ready Jet Go, Chat!</h1>
 
                 <form className="form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
+                  <h3 id="joinRoomTag">Enter Roomname:</h3>
                     <textarea 
                     variant="outlined"
                     margin="normal"
@@ -112,6 +113,7 @@ class Chatroom extends Component {
                         // Makes the input form change 
                   }}
                     />
+                    <h3 id="chatTag">Type your first message:</h3>
                     <textarea
                     variant="outlined"
                     margin="normal"
