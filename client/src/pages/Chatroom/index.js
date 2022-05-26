@@ -55,14 +55,15 @@ class Chatroom extends Component {
         return (
           
             <div className="container" role="chat">
-                {this.state.isLoggedIn ? <div style={{ marginTop: 50}}>
-                Room Name: {this.state.room}
+                {this.state.isLoggedIn ? <div  id="roomNameId" style={{ marginTop: 50}}> <h1 id="h1RoomName">
+                Room Name: {this.state.room}</h1>
 
                 <div className="chat-window"> 
                 {this.state.messages.map(message => <>
                     <div className="cardChat">
-                        <div className="card-header">
+                        
                         <p className="msg-name">{message.name}:</p>
+                        <div className="card-header">
                         <p className="msg-msg">{message.msg}</p>
                         </div>
                     </div>
@@ -73,6 +74,7 @@ class Chatroom extends Component {
                     <textarea 
                     id="outlined-helperText"
                     label="Make a comment"
+                    placeholder="Enter Message..."
                     variant="outlined"
                     value={this.state.value}
                     onChange={e => {
@@ -84,9 +86,9 @@ class Chatroom extends Component {
                     type="button"
                     variant="contained"
                     color="primary"
-                    className="submit"
+                    id="sendMessageBtn"
                     onClick={this.onButtonClicked}
-                    >Send Message!
+                    >Send Message
                     </button>
                 </form>
                 </div> 

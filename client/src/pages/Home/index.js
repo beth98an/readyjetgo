@@ -51,13 +51,13 @@ function Home() {
         <div className="carousel">
         <Carousel className="carousel1" breakPoints={breakPoints}>
           
-          <Card text="This app is amazing! Me and my friends had an amazing time!"/>
-          <Card text="This app is amazing! Me and my friends had an amazing time!"/>
-          <Card text="This app is amazing! Me and my friends had an amazing time!"/>
-          <Card text="This app is amazing! Me and my friends had an amazing time!"/>
-          <Card text="This app is amazing! Me and my friends had an amazing time!"/>
-          <Card text="This app is amazing! Me and my friends had an amazing time!"/>
-          <Card text="This app is amazing! Me and my friends had an amazing time!"/>
+          <Card text="Review 1"/>
+          <Card text="Review 2"/>
+          <Card text="Review 3"/>
+          <Card text="Review 4"/>
+          <Card text="Review 5"/>
+          <Card text="Review 6"/>
+          <Card text="Review 7"/>
         </Carousel>
         </div>
 
