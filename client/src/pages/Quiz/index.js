@@ -65,6 +65,7 @@ function TravelSurvey() {
                         <input type="radio" name="ans2" value="South America" onChange={updateAns2}/>South America
                         <input type="radio" name="ans2" value="North America" onChange={updateAns2}/>North America
                     </div>
+                    </div>
 
                     {/* <div className="card">
                         <label>Question3?</label><br/>
@@ -93,6 +94,8 @@ function TravelSurvey() {
                 </form>
                 </div>
             </div>
+            
+            
         )
 }
 
