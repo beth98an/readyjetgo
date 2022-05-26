@@ -28,7 +28,9 @@ function App() {
         <Route path="/result" element={<Results />} />
         <Route path="/destination" element={<Destination />} />
         <Route path="/chat" element={<Chatroom />} />
+        <Route path="/chat/<str:room_name>" element={<Chatroom />} />
         <Route path="/lobby" element={<Lobby />} />
+
         <Route path="/random" element={<Random />} />
       </Routes>
     </>
