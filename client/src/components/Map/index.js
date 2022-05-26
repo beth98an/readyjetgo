@@ -31,10 +31,9 @@ const Maps = (props) => {
   function Map() {
     const center = useMemo(() => ({lat: parseFloat(location[1]), lng: parseFloat(location[0])}),[])
     return(
-      <GoogleMap zoom={10} center={center} mapContainerClassName='map'>
+      <GoogleMap zoom={10} center={center} mapContainerClassName='map' data-testid='map'>
         <Marker position={center}/>
       </GoogleMap>
-
     );
   }
 }

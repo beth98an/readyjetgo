@@ -2,7 +2,8 @@ import reducer from "../redux/reducers"
 
 const initState = {
     username:'',
-    answers: {}
+    answers: {},
+    destination: ''
 }
 
 describe("Reducer", () => {
@@ -10,7 +11,8 @@ describe("Reducer", () => {
       const initReturn = reducer(undefined, { type: "@@INIT" });
       expect(initReturn).toEqual({
         username: '',
-        answers: {}
+        answers: {},
+        destination: ''
       });
     });
 });

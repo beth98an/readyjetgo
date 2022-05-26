@@ -25,13 +25,13 @@ const RandomLocation = () => {
         
         
         
-        <div className="randomContainer">
-        <button className="backRandomButton" onClick={()=>navigate('/home')}>Return Home</button>
-        <button className='hidden' id="randomButton" data-testid='randombtn' onClick={getLocation}>Random Location</button>
+        <div className="randomContainer" >
+        <button className="backRandomButton" onClick={()=>navigate('/home')}>Return   <br></br>Home</button>
+        <button className='hidden' id="randomButton" onClick={getLocation}>Random Location</button>
         
             
         {locations?
-        <div className="button hidden1" role='hiddenbtn'>
+        <div className="hidden1" role='hiddenbtn' test-dataid='randombtn'>
             <p id="locationName">{locations.Name}</p>
             <img className="randomimg"src={locations.Img}></img>
         </div>:<div></div>}

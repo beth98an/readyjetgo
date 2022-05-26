@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import './quiz.css';
+import NavBar from '../../layout/NavBar';
 
 
 function TravelSurvey() {
@@ -41,25 +42,30 @@ function TravelSurvey() {
 
     return(
             <div>
+                <NavBar />
 
-                <h1 className='quizTitle'>Quiz Time</h1>
+                <h1 className='quizTitle'>Discover Holidays</h1>
                 <div id="qustionBox">
             
                 <form onSubmit={(e)=>surveySubmit(e)}>
-
+                    <div className='quizContainer'>
                     <div className="cardQuiz" role='quiz'>
-                        <label htmlFor='ans1'>What type of holiday are you looking for?</label><br/>
-                        <input type="radio" name="ans1" value="City" onChange={updateAns1}/> City
-                        <input type="radio" name="ans1" value="Beach" onChange={updateAns1}/> Beach
+                        
+                        <label  htmlFor='ans1' className="questionOne">What type of holiday are you looking for?</label><br/>
+                        <input className="optionChoices" type="checkbox" name="ans1" value="City" onChange={updateAns1}/> City
+                        <input className="optionChoices" type="checkbox" name="ans1" value="Beach" onChange={updateAns1}/> Beach
+                    
                     </div>
 
+
                     <div className="cardQuiz">
-                        <label htmlFor='ans2'>Which continent would you like to visit?</label><br/>
-                        <input type="radio" name="ans2" value="Europe" onChange={updateAns2}/> Europe
-                        <input type="radio" name="ans2" value="Asia" onChange={updateAns2}/> Asia
-                        <input type="radio" name="ans2" value="Africa" onChange={updateAns2}/> Africa
-                        <input type="radio" name="ans2" value="North America" onChange={updateAns2}/>North America
-                        <input type="radio" name="ans2" value="South America" onChange={updateAns2}/>South America
+                        <label className="questionOne" htmlFor='ans2'>Which continent would you like to visit?</label><br/>
+                        <input className="optionChoices" type="checkbox" name="ans2" value="Europe" onChange={updateAns2}/> Europe
+                        <input className="optionChoices"type="checkbox" name="ans2" value="Asia" onChange={updateAns2}/> Asia
+                        <input className="optionChoices"type="checkbox" name="ans2" value="Africa" onChange={updateAns2}/> Africa
+                        <input className="optionChoices"type="checkbox" name="ans2" value="Africa" onChange={updateAns2}/> North America
+                        <input className="optionChoices"type="checkbox" name="ans2" value="South America" onChange={updateAns2}/>South America
+                    </div>
                     </div>
 
                     {/* <div className="card">

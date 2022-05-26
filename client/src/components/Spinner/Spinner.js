@@ -23,6 +23,8 @@ class App extends React.Component {
             <h1 className="spinnerTitle">Wheel of Travel</h1>  
                 
             <div className="arrow" data-testid='arrow'></div>
+            <div id="tester">Have too many travel options? Let us take care of that for you, look to the right for more info...</div>
+            <div id="tester1">Here's what to do: <br></br><br></br>1. Double click on the number and replace with text of your chosen destination<br></br><br></br>  2. Press spin and let the wheel of travel do it's job!<br></br><br></br> 3. Book your flight and get travelling!</div>
                 <ul className={this.state.name}>
                     <li>
                         <div className="text"
@@ -85,7 +87,7 @@ class App extends React.Component {
                         spellcheck="false">12</div>
                     </li>
                 </ul>
-                <div id="tester">Hello</div>
+                
                 <button className="spin-button"
                 onClick={this.startRotation}>SPIN</button>
                
