@@ -14,7 +14,7 @@ class Chatroom extends Component {
         room: 'readyjetgo',
       }
     
-      client = new W3CWebSocket('ws://127.0.0.1:8000/ws/chat/' + this.state.room + '/');
+      client = new W3CWebSocket(`ws://127.0.0.1:8000/ws/chat/${this.state.room}/`);
 
       onButtonClicked = (e) => {
         e.preventDefault();
