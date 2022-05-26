@@ -91,3 +91,9 @@
     top: 80px;
     font-size: 3rem;
 }
+
+#chatRoom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

@@ -55,7 +55,7 @@ class Chatroom extends Component {
         return (
           
             <div className="container" role="chat">
-                {this.state.isLoggedIn ? <div test-dataid='sendMessage' style={{ marginTop: 50}}>
+                {this.state.isLoggedIn ? <div style={{ marginTop: 50}}>
                 Room Name: {this.state.room}
 
                 <div className="chat-window"> 
@@ -95,6 +95,7 @@ class Chatroom extends Component {
                  
                 <div className="chatroom">
                 <h1 id="readyChatTitle" role="heading">Ready Jet Go, Chat!</h1>
+                <div id="enterRoomContainer">
 
                 <form className="form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
                   <h3 id="joinRoomTag">Enter Roomname:</h3>
@@ -139,6 +140,8 @@ class Chatroom extends Component {
                     Let's chat!
                     </button>
                 </form>
+                </div>
+
                 </div>}
           
             </div>
