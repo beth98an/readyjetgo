@@ -156,10 +156,6 @@
             "version": "==15.1.0"
         },
         "coverage": {
-<<<<<<< HEAD
-            "extras": [],
-=======
->>>>>>> a647da42025dcd3ddd6cbbc2107aa91026578f32
             "hashes": [
                 "sha256:00c8544510f3c98476bbd58201ac2b150ffbcce46a8c3e4fb89ebf01998f806a",
                 "sha256:016d7f5cf1c8c84f533a3c1f8f36126fbe00b2ec0ccca47cc5731c3723d327c6",
@@ -746,10 +742,6 @@
             "version": "==4.11.1"
         },
         "coverage": {
-<<<<<<< HEAD
-            "extras": [],
-=======
->>>>>>> a647da42025dcd3ddd6cbbc2107aa91026578f32
             "hashes": [
                 "sha256:00c8544510f3c98476bbd58201ac2b150ffbcce46a8c3e4fb89ebf01998f806a",
                 "sha256:016d7f5cf1c8c84f533a3c1f8f36126fbe00b2ec0ccca47cc5731c3723d327c6",
