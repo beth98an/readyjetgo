@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@900&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Indie+Flower&family=Lobster&family=Poppins:wght@100&family=Russo+One&family=Shadows+Into+Light&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gloria+Hallelujah&family=Permanent+Marker&family=Raleway:wght@100&family=Work+Sans:wght@100&display=swap");
 
 li:first-child .text {
     background-color: #ff7096;
@@ -106,7 +107,7 @@ li:nth-child(12) {
     border-radius: 50%;
     list-style: none;
     overflow: hidden;
-    margin-top: -680px;
+    margin-top: -722px;
 } 
 
 li {
@@ -134,7 +135,7 @@ li {
  } 
 
  #tester {
-    background-color: #f1fdcd;
+    background-color: #2a6fd1;
     width: 25%;
     padding: 70px;
     position: relative;
@@ -144,20 +145,50 @@ li {
     font-size: 2rem;
     font-family: 'Poppins';
     text-align: center;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 82px #053271,
+    0 0 92px #053271,
+    0 0 102px #053271,
+    0 0 151px #053271;
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 82px #053271,
+    0 0 92px #053271,
+    0 0 102px #053271,
+    0 0 151px #053271;
     
     }
 
 #tester1 {
-    background-color: #f1fdcd;
+    background-color: #2a6fd1;
     width: 25%;
     padding: 60px;
     position: relative;
     left: 1080px;
-    top: -180px;
+    top: -225px;
     border-radius: 23px 23px 23px 23px;
     font-size: 2rem;
     font-family: 'Poppins';
     text-align: center;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 82px #053271,
+    0 0 92px #053271,
+    0 0 102px #053271,
+    0 0 151px #053271;
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 82px #053271,
+    0 0 92px #053271,
+    0 0 102px #053271,
+    0 0 151px #053271;
 }
 
 
@@ -212,5 +243,6 @@ li {
     color: #333;
     letter-spacing: 8px;
     font-family: 'Dancing Script';
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 5;
 }
-

@@ -50,7 +50,7 @@ class App extends React.Component {
                         <div className="text"
                         contentEditable="true"
                         spellcheck="false">5</div>
-                    </li>
+                    </li> 
                     <li>
                         <div className="text"
                         contentEditable="true"
@@ -85,7 +85,7 @@ class App extends React.Component {
                         <div className="text"
                         contentEditable="true"
                         spellcheck="false">12</div>
-                    </li>
+                    </li> 
                 </ul>
                 
                 <button className="spin-button"

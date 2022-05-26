@@ -1,8 +1,14 @@
 import { screen } from "@testing-library/react";
+import { render } from "express/lib/response";
 import Chat from "./index";
+import { sendMessage } from './index'
 
-describe('Chatroom', () => {
-    
+    test('should render a message button', () => {
+        renderWithReduxProvider(<sendMessage />)
+        const sendMessage = screen.getByTestId('sendMessage')
+        expect(sendMessage.textContent).toContain('Send Message!')
+    })
+
     test('has an id of heading"', () => {
         renderWithReduxProvider(<Chat />);
         const heading = screen.getByRole('head')

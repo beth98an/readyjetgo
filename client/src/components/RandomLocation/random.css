@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@900&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Indie+Flower&family=Lobster&family=Poppins:wght@100&family=Quicksand&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gloria+Hallelujah&family=Permanent+Marker&family=Raleway:wght@100&family=Work+Sans:wght@100&display=swap");
 #randomButton {
   margin-right: 100px;
     border-radius: 3px;
@@ -87,6 +87,9 @@
   font-family: 'sans-serif';
   color: #333;
   font-size: 9rem;
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: 5;
+
 }
 
 .randomimg {
