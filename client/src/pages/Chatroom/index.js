@@ -11,7 +11,7 @@ class Chatroom extends Component {
         messages: [],
         value: '',
         name: '',
-        room: 'readyjetgo',
+        room: 'r',
       }
     
       client = new W3CWebSocket(`ws://127.0.0.1:8000/ws/chat/${this.state.room}/`);
@@ -62,8 +62,8 @@ class Chatroom extends Component {
                 {this.state.messages.map(message => <>
                     <div className="card">
                         <div className="card-header">
-                        <p>{message.name}</p>
-                        <p>{message.msg}</p>
+                        <p className="msg-name">{message.name}:</p>
+                        <p className="msg-msg">{message.msg}</p>
                         </div>
                     </div>
                 </>)}
@@ -97,7 +97,7 @@ class Chatroom extends Component {
                 <h1 id="readyChatTitle" role="heading">Ready Jet Go, Chat!</h1>
 
                 <form className="form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
-                  <h3 id="joinRoomTag">Enter Roomname:</h3>
+                  {/* <h3 id="joinRoomTag">Enter Roomname</h3> */}
                     <textarea 
                     variant="outlined"
                     margin="normal"
@@ -105,6 +105,7 @@ class Chatroom extends Component {
                     id="email"
                     label="Chatroom Name"
                     name="Chatroom Name"
+                    placeholder="Enter Room Name"
                     autoFocus
                     value={this.state.room}
                     onChange={e => {
@@ -113,7 +114,7 @@ class Chatroom extends Component {
                         // Makes the input form change 
                   }}
                     />
-                    <h3 id="chatTag">Type your first message:</h3>
+                    {/* <h3 id="chatTag">Type your first message:</h3> */}
                     <textarea
                     variant="outlined"
                     margin="normal"
@@ -122,6 +123,7 @@ class Chatroom extends Component {
                     label="username"
                     type="username"
                     id="Name"
+                    placeholder="Enter Your Name"
                     value={this.state.name}
                     onChange={e => {
                         this.setState({ name: e.target.value });
