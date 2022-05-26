@@ -60,7 +60,7 @@ class Chatroom extends Component {
 
                 <div className="chat-window"> 
                 {this.state.messages.map(message => <>
-                    <div className="card">
+                    <div className="cardChat">
                         <div className="card-header">
                         <p className="msg-name">{message.name}:</p>
                         <p className="msg-msg">{message.msg}</p>
