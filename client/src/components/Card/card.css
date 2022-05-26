@@ -26,10 +26,18 @@
     width: 100px;
     height: 100px;
     position: absolute;
+    left: 400px;
     
 }
 
 .imgCard {
     padding-left: 350px;
     padding-bottom: 120px;
+}
+
+#HomeLogo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 60px;
 }

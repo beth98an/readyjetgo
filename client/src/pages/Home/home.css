@@ -165,4 +165,12 @@
 
   h4 {
     color: white;
+    position: relative;
+    width: 100px;
+    left: 90px;
+  }
+
+  .imgHome {
+    position: relative;
+    left: 20px;
   }
