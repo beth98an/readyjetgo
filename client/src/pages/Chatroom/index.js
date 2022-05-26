@@ -55,7 +55,7 @@ class Chatroom extends Component {
         return (
           
             <div className="container" role="chat">
-                {this.state.isLoggedIn ? <div test-dataid='sendMessage' style={{ marginTop: 50}}>
+                {this.state.isLoggedIn ? <div style={{ marginTop: 50}}>
                 Room Name: {this.state.room}
 
                 <div className="chat-window"> 
