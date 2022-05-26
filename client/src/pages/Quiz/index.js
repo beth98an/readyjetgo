@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import './quiz.css';
 import NavBar from '../../layout/NavBar';
@@ -8,7 +8,6 @@ import NavBar from '../../layout/NavBar';
 function TravelSurvey() {
     const dispatch =  useDispatch()
     const navigate = useNavigate()
-    const name = useSelector(state => state.username);
     const [cityBeach, setCityBeach ] = useState();
     const [continent, setContinent ] = useState();
     
@@ -59,13 +58,12 @@ function TravelSurvey() {
 
 
                     <div className="cardQuiz">
-                        <label className="questionOne" htmlFor='ans2'>Which continent would you like to visit?</label><br/>
-                        <input className="optionChoices" type="checkbox" name="ans2" value="Europe" onChange={updateAns2}/> Europe
-                        <input className="optionChoices"type="checkbox" name="ans2" value="Asia" onChange={updateAns2}/> Asia
-                        <input className="optionChoices"type="checkbox" name="ans2" value="Africa" onChange={updateAns2}/> Africa
-                        <input className="optionChoices"type="checkbox" name="ans2" value="Africa" onChange={updateAns2}/> North America
-                        <input className="optionChoices"type="checkbox" name="ans2" value="South America" onChange={updateAns2}/>South America
-                    </div>
+                        <label htmlFor='ans2'>Which continent would you like to visit?</label><br/>
+                        <input type="radio" name="ans2" value="Europe" onChange={updateAns2}/> Europe
+                        <input type="radio" name="ans2" value="Asia" onChange={updateAns2}/> Asia
+                        <input type="radio" name="ans2" value="Africa" onChange={updateAns2}/> Africa
+                        <input type="radio" name="ans2" value="South America" onChange={updateAns2}/>South America
+                        <input type="radio" name="ans2" value="North America" onChange={updateAns2}/>North America
                     </div>
 
                     {/* <div className="card">
