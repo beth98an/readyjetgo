@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import './quiz.css';
+import NavBar from '../../layout/NavBar';
 
 
 function TravelSurvey() {
@@ -41,8 +42,9 @@ function TravelSurvey() {
 
     return(
             <div>
+                <NavBar />
 
-                <h1 className='quizTitle'>2 Steps Away To Find your Perfect Holiday...</h1>
+                <h1 className='quizTitle'>Discover Holidays</h1>
                 <div id="qustionBox">
             
                 <form onSubmit={(e)=>surveySubmit(e)}>

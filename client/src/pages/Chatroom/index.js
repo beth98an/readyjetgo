@@ -128,6 +128,7 @@ class Chatroom extends Component {
                     
                     />
                     <button
+                    id='letsChatButton'
                     type="submit"
                     variant="contained"
                     color="primary"
