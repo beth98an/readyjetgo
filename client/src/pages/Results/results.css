@@ -52,7 +52,7 @@
     animation:blinking 3s infinite;
 }
 @keyframes blinking{
-    0%{   color: green;   }
+    0%{   color: #053271;   }
     47%{   color: #000; }
     62%{   color: transparent; }
     97%{   color:transparent; }

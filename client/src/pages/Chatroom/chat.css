@@ -1,4 +1,4 @@
-.card-header{
+/* .card-header{
     background-color: none;
     color: black;
 }
@@ -44,7 +44,7 @@
     letter-spacing: 1px;
     position: relative;
     box-shadow: 0 7px #999;
-    bottom:-77px;
+    top:-77px;
     color: #fff;
     text-shadow:
     0 0 7px #fff,
@@ -60,8 +60,8 @@
     letter-spacing: 1px;
     position: relative;
     box-shadow: 0 7px #999;
-    margin-left: 850px;
-    top: 500px;
+    margin-left: 50px;
+    bottom: 200px;
     right: 182px;
     font-size: 2.5rem;
     animation: pulsate 1.5s infinite alternate;  
@@ -78,6 +78,12 @@
 
 }
 
+#enterRoomContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #joinRoomTag {
     position: relative;
     left: 360px;
@@ -90,10 +96,40 @@
     left: 755px;
     top: 80px;
     font-size: 3rem;
+} */
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    background-color: #f1fdcd;
 }
 
-#chatRoom {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+textarea{
+    display: block;
+    margin: 20px;
+    resize: none;
+    border: none;
 }
+
+.submit{
+    position: relative;
+    left: 20%;
+
+}
+
+.cardChat{
+    background-color: #f1fdcd;
+}
+
+.msg-name, .msg-msg{
+    margin: 10px;
+    color: black;
+    text-align: left;
+    font-size: 16px;
+
+}
+
+
