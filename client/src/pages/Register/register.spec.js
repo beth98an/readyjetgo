@@ -12,4 +12,13 @@ test("has a title id of Register", () => {
     let id = screen.getByTestId("h1");
     expect(id).toBeInTheDocument();
 })
-
+test("has a element for username input", () => {
+  renderWithReduxProvider(<Register />);
+  let id = screen.getByTestId("username");
+  expect(id).toBeInTheDocument();
+})
+test("has a element for password input", () => {
+  renderWithReduxProvider(<Register />);
+  let id = screen.getByTestId("password");
+  expect(id).toBeInTheDocument();
+})

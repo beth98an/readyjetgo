@@ -43,12 +43,12 @@ function TravelSurvey() {
             <div>
                 <NavBar />
 
-                <h1 className='quizTitle'>Discover Holidays</h1>
-                <div id="qustionBox">
+                <h1 role='head' className='quizTitle'>Discover Holidays</h1>
+                <div id="qustionBox" >
             
-                <form onSubmit={(e)=>surveySubmit(e)}>
+                <form role='quiz' onSubmit={(e)=>surveySubmit(e)}>
                     <div className='quizContainer'>
-                    <div className="cardQuiz" role='quiz'>
+                    <div role='ans1' className="cardQuiz">
                         
                         <label  htmlFor='ans1' className="questionOne">What type of holiday are you looking for?</label><br/>
                         <input className="optionChoices" type="checkbox" name="ans1" value="City" onChange={updateAns1}/> City
@@ -57,7 +57,7 @@ function TravelSurvey() {
                     </div>
 
 
-                    <div className="cardQuiz">
+                    <div role='ans2' className="cardQuiz">
                         <label htmlFor='ans2'>Which continent would you like to visit?</label><br/>
                         <input type="radio" name="ans2" value="Europe" onChange={updateAns2}/> Europe
                         <input type="radio" name="ans2" value="Asia" onChange={updateAns2}/> Asia
@@ -90,7 +90,7 @@ function TravelSurvey() {
                         <input type="radio" name="ans5" value="Option3" onChange={this.answerSelected}/> Option 3
                         <input type="radio" name="ans5" value="Option4" onChange={this.answerSelected}/> Option 4
                     </div> */}
-                    <input className="feedback-button" type="submit" value="submit"/>
+                    <input role='submit' className="feedback-button" type="submit" value="submit"/>
                 </form>
                 </div>
             </div>

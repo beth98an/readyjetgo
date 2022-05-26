@@ -5,7 +5,7 @@ test("it renders the Lobby component", () => {
     renderWithReduxProvider(<Lobby />);
     let main = screen.getByRole("maintest");
     expect(main).toBeInTheDocument();
-  });
+});
 
 
 

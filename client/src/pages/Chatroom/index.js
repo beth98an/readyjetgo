@@ -1,4 +1,4 @@
-import React, { useEffect, Component } from 'react'
+import React, { Component } from 'react'
 import { w3cwebsocket as W3CWebSocket } from 'websocket';
 import './chat.css';
 
@@ -93,10 +93,10 @@ class Chatroom extends Component {
                 
                 :
                  
-                <div className="chatroom">
-                <h1 id="readyChatTitle" role="heading">Ready Jet Go, Chat!</h1>
+                <div className="chatroom" role='chatroom'>
+                <h1 id="readyChatTitle" role="head">Ready Jet Go, Chat!</h1>
 
-                <form className="form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
+                <form role='startRoom' className="form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
                   <h3 id="joinRoomTag">Enter Roomname:</h3>
                     <textarea 
                     variant="outlined"

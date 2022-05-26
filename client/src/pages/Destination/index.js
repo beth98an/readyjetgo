@@ -79,7 +79,7 @@ function Destination() {
     }
 
   return (
-    <div>
+    <div role='destinations'>
         <h1 id="optionsTitle">Here Are  Your Destination Options!</h1>
         <p id="clickTitle">Click Your Desired Destination to Start Your Travels...</p>
         {finalList?<div id='placesDiv'>{places(finalList)}</div>:<h4>Loading</h4>}

@@ -31,8 +31,8 @@ function Register() {
             <div className="formdiv">
                 <form role="register" className="registerForm" onSubmit={handleSubmit}>
                     <h1 id="title" data-testid="h1">Register</h1>
-                    <input type='text' placeholder='Enter username' id="username" onChange={(e) => setUsername(e.target.value)}></input>
-                    <input type='password' placeholder='Enter password' id='password' onChange={(e) => setPassword(e.target.value)}></input>
+                    <input data-testid="username"type='text' placeholder='Enter username' id="username" onChange={(e) => setUsername(e.target.value)}></input>
+                    <input data-testid="password"type='password' placeholder='Enter password' id='password' onChange={(e) => setPassword(e.target.value)}></input>
                     <input type='password' placeholder='Confirm password' id='confirm_password' onChange={(e) => setConfirmPass(e.target.value)}></input>
                     <input type='submit' id="signupButton" value='Sign up'></input>
                     <a className='return-to-login' href="/login">

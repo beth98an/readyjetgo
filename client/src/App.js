@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Switch, Redirect } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -9,7 +9,6 @@ import TravelSurvey from './pages/Quiz';
 import Results from './pages/Results';
 import Lobby from './pages/Lobby';
 import Destination from './pages/Destination';
-import RandomLocation from './components/RandomLocation/RandomLocation';
 import Random from './pages/Random';
 import Chatroom from './pages/Chatroom';
 
@@ -28,7 +27,7 @@ function App() {
         <Route path="/result" element={<Results />} />
         <Route path="/destination" element={<Destination />} />
         <Route path="/chat" element={<Chatroom />} />
-        <Route path="/chat/<str:room_name>" element={<Chatroom />} />
+        <Route path="/chat/:room_name" element={<Chatroom />} />
         <Route path="/lobby" element={<Lobby />} />
 
         <Route path="/random" element={<Random />} />

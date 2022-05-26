@@ -20,7 +20,7 @@ const Maps = (props) => {
 
   
 
-  if (!isLoaded) return (<div>Loading map...</div>)
+  if (!isLoaded) return (<div data-testid='loading'>Loading map...</div>)
   
 
   return (

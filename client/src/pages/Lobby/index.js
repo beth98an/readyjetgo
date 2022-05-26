@@ -44,7 +44,7 @@ function Lobby() {
 
     return (
         <>
-            <div data-testid='lobbybtn' role='maintest'>
+            <div  role='maintest'>
             <main>
                 {messages.map(message =>
                     <div key={message.id} >
@@ -52,7 +52,7 @@ function Lobby() {
                         <p>{message['msg']}</p>
                     </div>)}
                 <input id="chat-message-input" type="text" value={value} onChange={e => setValue(e.target.value)}></input>
-                <input id="chat-message-submit" type="button" value="Send" onClick={ButtonClicked}></input>
+                <input data-testid='lobbybtn' id="chat-message-submit" type="button" value="Send" onClick={ButtonClicked}></input>
             </main>
             </div>
         </>
