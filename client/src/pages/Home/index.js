@@ -50,9 +50,8 @@ function Home() {
         <div className='boxContainer'>
         <div className="carousel">
         <Carousel className="carousel1" breakPoints={breakPoints}>
-          <div className='One'>
+          
           <Card text="Review 1"/>
-          </div>
           <Card text="Review 2"/>
           <Card text="Review 3"/>
           <Card text="Review 4"/>

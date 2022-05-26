@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Lato&family=Lobster&family=Poppins:wght@300;400;500;600&family=Roboto&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gloria+Hallelujah&family=Permanent+Marker&family=Raleway:wght@100&family=Work+Sans:wght@100&display=swap");
  /* .App {
   text-align: center;
   font-family: aldrich;
@@ -128,6 +128,8 @@
     font-family: 'sans-serif';
     padding: 5px;
     color: #333;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 5;
 }
 
 #qustionBox {
