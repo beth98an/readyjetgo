@@ -54,11 +54,11 @@ class Chatroom extends Component {
     render() {
         return (
           
-            <div className="container">
+            <div className="container" role="chat">
                 {this.state.isLoggedIn ? <div style={{ marginTop: 50}}>
                 Room Name: {this.state.room}
 
-                <div className="chat-window">
+                <div className="chat-window"> 
                 {this.state.messages.map(message => <>
                     <div className="card">
                         <div className="card-header">
@@ -94,7 +94,7 @@ class Chatroom extends Component {
                 :
                  
                 <div className="chatroom">
-                <h1 id="readyChatTitle">Ready Jet Go, Chat!</h1>
+                <h1 id="readyChatTitle" role="heading">Ready Jet Go, Chat!</h1>
 
                 <form className="form" noValidate onSubmit={value => this.setState({ isLoggedIn: true })}>
                     <textarea 
