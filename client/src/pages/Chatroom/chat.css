@@ -1,4 +1,4 @@
-.card-header{
+/* .card-header{
     background-color: none;
     color: black;
 }
@@ -96,4 +96,40 @@
     left: 755px;
     top: 80px;
     font-size: 3rem;
+} */
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    background-color: #f1fdcd;
 }
+
+textarea{
+    display: block;
+    margin: 20px;
+    resize: none;
+    border: none;
+}
+
+.submit{
+    position: relative;
+    left: 20%;
+
+}
+
+.card{
+    background-color: #f1fdcd;
+}
+
+.msg-name, .msg-msg{
+    margin: 10px;
+    color: black;
+    text-align: left;
+    font-size: 16px;
+
+}
+
+
