@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
+
 const PrivateRoute = () => {
     const auth = null; // determine if authorized, from context or however you're doing it
 
@@ -8,5 +9,7 @@ const PrivateRoute = () => {
     // If not, return element that will navigate to login page
     return auth ? <Outlet /> : <Navigate to="/login"/>;
 }
+
+<div role='test'></div>
 
 export default PrivateRoute

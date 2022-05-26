@@ -1,6 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import "./navbar.css"
+import { FaHome } from "react-icons/fa";
+import { GiCarWheel } from "react-icons/gi";
+import { RiLogoutCircleLine } from "react-icons/ri";
 
 function index() {
   return (
@@ -12,19 +15,19 @@ function index() {
               margin: '50px',
               textDecoration: 'none'
               
-            })}>Home</NavLink>
+            })}>< FaHome size={60}/></NavLink>
       <NavLink className="main" to='/main' style={({ isActive }) => ({
               fontSize: '3rem',
               margin: '50px',
               textDecoration: 'none'
-            })}>Spinner</NavLink>
+            })}><GiCarWheel size={60}/></NavLink>
       <NavLink className="login" to='/login' style={({ isActive }) => ({
               color: isActive ? '' : '',
               background: isActive ? '' : '',
               fontSize: '3rem',
               margin: '50px',
               textDecoration: 'none'
-            })}>Log out</NavLink>
+            })}><RiLogoutCircleLine size={60}/></NavLink>
     </nav>
   )
 }
